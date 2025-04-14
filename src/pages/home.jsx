@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import NameSection from "../components/nameSection";
 import DecryptedText from "../components/decryptedText";
+import Resume from "/resume.pdf";
 
 function HomePage() {
   const [activeSection, setActiveSection] = useState("home");
@@ -27,7 +28,7 @@ function HomePage() {
                 className="font-bold"
               />
             </motion.div>
-          
+
             <div className="hidden md:flex space-x-6">
               {["Experience", "Skills", "Projects", "Contact"].map((item) => (
                 <motion.button
@@ -38,12 +39,13 @@ function HomePage() {
                   onClick={() => setActiveSection(item.toLowerCase())}
                   whileTap={{ y: 0 }}
                 >
-                 <span className="text-sm">{item}</span> 
+                  <span className="text-sm">{item}</span>
                 </motion.button>
               ))}
 
               <motion.a
-                href="#resume"
+                href={Resume}
+                target="_blank"
                 className="px-6 py-2 border border-gray-800 rounded-md hover:bg-black hover:text-white transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

@@ -4,7 +4,7 @@ import DecryptedText from "./decryptedText";
 import LinkedInIcon from "../assets/linkedin.svg";
 import GithubIcon from "../assets/github.svg";
 import { SiLeetcode } from "react-icons/si";
-import Resume from "/resume.pdf"
+import Resume from "/resume.pdf";
 
 function NameSection() {
   const roles = ["developer", "inventor", "coder"];
@@ -144,7 +144,6 @@ function NameSection() {
         >
           <motion.a
             href="https://www.linkedin.com/in/adhavan10/"
-            target="_blank"
             className="text-white rounded-md hover:transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -153,7 +152,6 @@ function NameSection() {
           </motion.a>
           <motion.a
             href="https://github.com/adhavan13"
-            target="_blank"
             className="text-white rounded-md hover: transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -162,7 +160,6 @@ function NameSection() {
           </motion.a>
           <motion.a
             href="https://leetcode.com/u/adhavankannan10/"
-            target="_blank"
             className="text-black rounded-md hover:transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
