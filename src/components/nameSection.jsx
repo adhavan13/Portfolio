@@ -4,6 +4,7 @@ import DecryptedText from "./decryptedText";
 import LinkedInIcon from "../assets/linkedin.svg";
 import GithubIcon from "../assets/github.svg";
 import { SiLeetcode } from "react-icons/si";
+import Resume from "/resume.pdf"
 
 function NameSection() {
   const roles = ["developer", "inventor", "coder"];
@@ -142,7 +143,8 @@ function NameSection() {
           variants={itemVariants}
         >
           <motion.a
-            href="#"
+            href="https://www.linkedin.com/in/adhavan10/"
+            target="_blank"
             className="text-white rounded-md hover:transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -150,7 +152,8 @@ function NameSection() {
             <img src={LinkedInIcon} alt="LinkedIn" className="w-12 h-12" />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://github.com/adhavan13"
+            target="_blank"
             className="text-white rounded-md hover: transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -158,7 +161,8 @@ function NameSection() {
             <img src={GithubIcon} alt="LinkedIn" className="w-12 h-12" />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://leetcode.com/u/adhavankannan10/"
+            target="_blank"
             className="text-black rounded-md hover:transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -166,7 +170,8 @@ function NameSection() {
             <SiLeetcode className="w-12 h-12" />
           </motion.a>
           <motion.a
-            href="#"
+            href={Resume}
+            target="_blank"
             className="p-3 border border-gray-500 text-gray-800 rounded-md hover:bg-black hover:text-white transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
