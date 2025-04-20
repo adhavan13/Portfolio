@@ -3,6 +3,13 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ["Poppins", "sans-serif"],
+        body: ["Roboto", "sans-serif"],
+        open: ['"Open Sans"', "sans-serif"],
+        special: ['"Special Gothic Expanded One"', "sans-serif"],
+        roboto: ['Roboto', 'sans-serif'],
+      },
       fontSize: {
         "2xl": "1.5rem",
         "3xl": "2rem",

@@ -3,15 +3,8 @@ import Home from "./pages/home";
 import HomePage from "./pages/home";
 import CodeLoadingScreen from "./components/loading";
 
-
-
 function App() {
-  return (
-    <div className="flex flex-col">
-      {/* <HomePage /> */}
-      <CodeLoadingScreen/>
-    </div>
-  );
+  return <CodeLoadingScreen />;
 }
 
 export default App;

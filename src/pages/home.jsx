@@ -10,40 +10,25 @@ import ProjectsList from "../components/products";
 import OtherProjects from "../components/projects";
 import Footer from "../components/footer";
 import NavBar from "../components/navBar";
-
+import SideElements from "../components/sideElements"; // Import the new component
 
 function HomePage() {
   const [activeSection, setActiveSection] = useState("home");
 
   return (
     <motion.div
-      className="flex flex-col text-black min-h-screen bg-white"
+      className="flex flex-col text-black min-h-screen bg-gray-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <main className="flex-grow">
-        <div className="fixed top-0 left-0 w-12 h-full bg-white z-10">
-          <div
-            className="flex flex-col gap-4"
-            style={{
-              letterSpacing: "2px",
-              color: "white",
-              marginTop: "650px",
-              marginLeft: "10px",
-            }}
-          >
-            <img src={GithubIcon} alt="LinkedIn" className="w-6 h-6" />
-            <img src={GithubIcon} alt="LinkedIn" className="w-6 h-6" />
-            <img src={GithubIcon} alt="LinkedIn" className="w-6 h-6" />
-          </div>
-        </div>
         <NavBar />
 
         <section id="home">
           <NameSection />
         </section>
-        <section>
+        <section id="experience" className="mt">
           <WorkExperience />
         </section>
         <section className="mt-12">
@@ -58,20 +43,6 @@ function HomePage() {
         <section>
           <Footer />
         </section>
-        <div className="fixed top-0 right-0 w-12 h-full bg-black z-10 flex flex-col justify-center items-center">
-          <div
-            style={{
-              writingMode: "vertical-rl",
-              transform: "rotate(360deg)",
-              letterSpacing: "2px",
-              color: "white",
-              marginTop: "500px",
-            }}
-          >
-            adhavankannan@gmail.com----
-          </div>
-        </div>
-        {/* Add other sections as needed */}
       </main>
     </motion.div>
   );

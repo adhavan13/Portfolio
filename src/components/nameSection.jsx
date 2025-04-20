@@ -7,7 +7,7 @@ import { SiLeetcode } from "react-icons/si";
 import Resume from "/resume.pdf";
 
 function NameSection() {
-  const roles = ["developer", "inventor", "coder"];
+  const roles = [" developer", " inventor", " coder"];
   const [displayText, setDisplayText] = useState("");
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -71,20 +71,20 @@ function NameSection() {
 
   return (
     <motion.div
-      className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto py-12 px-4"
+      className="flex flex-col font-roboto md:flex-row items-center justify-between w-full max-w-6xl mx-auto py-12 px"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <div className="w-full md:max-w-6xl space-y-12">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col">
           <motion.div
             className="text-lg md:text-lg text-gray-500 font-medium"
             variants={itemVariants}
           >
             <div style={{ marginTop: "4rem" }}>
               <DecryptedText
-                text="  Hi, my name is,"
+                text="  Hi, my name is"
                 animateOn="view"
                 revealDirection="center"
                 speed={150}
@@ -95,12 +95,12 @@ function NameSection() {
           </motion.div>
 
           <motion.div
-            className="text-6xl md:text-8xl font-bold text-gray-900"
+            className="text-6xl md:text-8xl font-bold text-black"
             variants={itemVariants}
           >
             <h1>
               <DecryptedText
-                text="Adhavan Se V"
+                text="Mithuna"
                 animateOn="view"
                 speed={150}
                 maxIterations={15}
@@ -116,7 +116,7 @@ function NameSection() {
           >
             <p className="flex items-center">
               I'm a{" "}
-              <span className="text-blue-600 ml-2 w-28 md:w-32 inline-block">
+              <span className="text-blue-600 w-28 md:w-32 inline-block ml-2">
                 {displayText}
                 <span className="animate-pulse ml-1">|</span>
               </span>
@@ -125,7 +125,7 @@ function NameSection() {
 
           <div>
             <motion.div
-              className="text-xl md:text-xl text-gray-600 max-w-6xl"
+              className="text-xl md:text-xl text-gray-600 max-w-6xl mt-2"
               variants={itemVariants}
             >
               <p>
@@ -169,7 +169,7 @@ function NameSection() {
           <motion.a
             href={Resume}
             target="_blank"
-            className="p-3 border border-gray-500 text-gray-800 rounded-md hover:bg-black hover:text-white transition-colors"
+            className="p-3 font-special border border-gray-500 text-gray-800 rounded-md hover:bg-black hover:text-white transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

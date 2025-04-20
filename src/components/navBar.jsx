@@ -30,7 +30,7 @@ function NavBar() {
 
   return (
     <motion.nav 
-      className="mt-7 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg"
+      className="mt-7 bg-gray-50 bg-opacity-90 backdrop-filter backdrop-blur-lg"
       initial="hidden"
       animate="visible"
       variants={navbarVariants}
@@ -50,30 +50,30 @@ function NavBar() {
             />
           </motion.div>
 
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-6 text-gray-600">
             {["Experience", "Skills", "Projects", "Contact"].map((item, index) => (
               <motion.button
                 key={item}
-                className={`transition-colors hover:bg-gray-200 px-4 py-2 rounded-md ${
+                className={`font-special  transition-colors hover:bg-gray-200 px-2 py-2 rounded-md ${
                   activeSection === item.toLowerCase() ? "text-blue-600" : ""
                 }`}
                 onClick={() => setActiveSection(item.toLowerCase())}
                 whileTap={{ y: 0 }}
                 variants={itemVariants}
               >
-                <span className="text-sm">{item}</span>
+                <span className="text-xs">{item}</span>
               </motion.button>
             ))}
 
             <motion.a
               // href={Resume}
               // target="_blank"
-              className="px-6 py-2 border border-gray-800 rounded-md hover:bg-black hover:text-white transition-colors"
+              className="px-6 py-2 border border-gray-800 font-special rounded-md hover:bg-black hover:text-white transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               variants={itemVariants}
             >
-              Contact
+              Resume
             </motion.a>
           </div>
         </div>
