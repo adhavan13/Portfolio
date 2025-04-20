@@ -169,7 +169,7 @@ function NameSection() {
           <motion.a
             href={Resume}
             target="_blank"
-            className="p-3 font-special border border-gray-500 text-gray-800 rounded-md hover:bg-black hover:text-white transition-colors"
+            className="p-3 font-special text-sm border border-gray-500 text-gray-800 rounded-md hover:bg-black hover:text-white transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

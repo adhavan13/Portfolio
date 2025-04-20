@@ -22,7 +22,7 @@ import cppImage from "../assets/c-.svg";
 import pythonImage from "../assets/python.svg";
 import gitImage from "../assets/git.svg";
 import nodejsImage from "../assets/nodejs.svg";
-// import mongodbImage from "../assets/mongodb.svg";
+import mongodbImage from "../assets/mongoDb.svg";
 import dockerImage from "../assets/docker.svg";
 import SeleniumImage from "../assets/selenium.svg";
 import sqlImage from "../assets/mysql.svg";
@@ -80,7 +80,7 @@ function Skills() {
     { Icon: SiExpress, name: "Express.js", image: "/images/express.png" },
     { Icon: SiNodedotjs, name: "Node.js", image: nodejsImage },
     { Icon: SiReact, name: "React.js", image: reactImage },
-    { Icon: SiMongodb, name: "MongoDB", image: "/images/mongodb.png" },
+    { Icon: SiMongodb, name: "MongoDB", image: mongodbImage },
     { Icon: SiMysql, name: "MySQL", image: sqlImage },
   ];
 
@@ -89,7 +89,6 @@ function Skills() {
     // { Icon: SiAws, name: "AWS", image: "/images/aws.png" },
     { Icon: SiGooglecloud, name: "Git hub", image: gitImage },
     { Icon: SiDocker, name: "Docker", image: dockerImage },
-    { Icon: SiGit, name: "Git", image: "/images/git.png" },
   ];
 
   // Render skill item
@@ -105,21 +104,19 @@ function Skills() {
       className="flex flex-col items-center gap-2"
     >
       <motion.div
-        className="flex items-center justify-center h-16"
+        className="flex items-center justify-center w-16 h-16"
         whileHover={{
           filter: "drop-shadow(0 0 8px rgba(255,255,255,0.5))",
           transition: { duration: 0.2 },
         }}
       >
-        {item.image ? (
+        {
           <img
             src={item.image}
             alt={item.name}
-            className="max-h-10 max-w-10 object-contain"
+            className="max-h-12 w-24 object-contain"
           />
-        ) : (
-          <item.Icon className="h-10 text-gray-800" />
-        )}
+        }
       </motion.div>
       <span className="text-gray-600 text-sm font-medium mt-1">
         {item.name}
@@ -128,10 +125,7 @@ function Skills() {
   );
 
   return (
-    <div
-      className="flex flex-col py-16 px-4 max-w-6xl mx-auto"
-      ref={sectionRef}
-    >
+    <div className="flex flex-col max-w-6xl mx-auto" ref={sectionRef}>
       {/* Section: Languages I speak */}
       <motion.div
         initial="hidden"
@@ -139,13 +133,16 @@ function Skills() {
         variants={containerVariants}
         className="mb-12"
       >
-        <motion.h2 variants={itemVariants} className="text-xl font-bold mb-8">
+        <motion.h2
+          variants={itemVariants}
+          className="text-4xl font-roboto font-bold mb-8"
+        >
           Languages I speak
         </motion.h2>
 
         <motion.div
           variants={containerVariants}
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 sm:gap-8"
+          className="flex flex-wrap gap-6 sm:gap-16 pl-12"
         >
           {languages.map((lang, index) => renderSkillItem(lang, index))}
         </motion.div>
@@ -158,13 +155,16 @@ function Skills() {
         variants={containerVariants}
         className="mb-12"
       >
-        <motion.h2 variants={itemVariants} className="text-xl font-bold mb-8">
+        <motion.h2
+          variants={itemVariants}
+          className="text-4xl font-roboto font-bold mb-8"
+        >
           Frameworks & Databases I Love
         </motion.h2>
 
         <motion.div
           variants={containerVariants}
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 sm:gap-8"
+          className="flex flex-wrap gap-6 sm:gap-16 pl-12"
         >
           {frameworksDatabase.map((item, index) =>
             renderSkillItem(item, index)
@@ -179,13 +179,16 @@ function Skills() {
         variants={containerVariants}
         className="mb-12"
       >
-        <motion.h2 variants={itemVariants} className="text-xl font-bold mb-8">
+        <motion.h2
+          variants={itemVariants}
+          className="text-4xl font-roboto font-bold mb-8"
+        >
           Libraries & Services I Use
         </motion.h2>
 
         <motion.div
           variants={containerVariants}
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 sm:gap-8"
+          className="flex flex-wrap gap-6 sm:gap-16 pl-12"
         >
           {servicesLibraries.map((item, index) => renderSkillItem(item, index))}
         </motion.div>

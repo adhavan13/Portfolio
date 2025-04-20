@@ -8,7 +8,9 @@ module.exports = {
         body: ["Roboto", "sans-serif"],
         open: ['"Open Sans"', "sans-serif"],
         special: ['"Special Gothic Expanded One"', "sans-serif"],
-        roboto: ['Roboto', 'sans-serif'],
+        roboto: ["Roboto", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
+        spacegrotesk: ["Space Grotesk", "sans-serif"],
       },
       fontSize: {
         "2xl": "1.5rem",

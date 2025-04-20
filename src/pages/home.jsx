@@ -17,18 +17,20 @@ function HomePage() {
 
   return (
     <motion.div
-      className="flex flex-col text-black min-h-screen bg-gray-50"
+      className="flex flex-col text-black min-h-screen neutral-100"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <main className="flex-grow">
+        <section>
         <NavBar />
+        </section>
 
         <section id="home">
           <NameSection />
         </section>
-        <section id="experience" className="mt">
+        <section id="experience" className="mt-28">
           <WorkExperience />
         </section>
         <section className="mt-12">

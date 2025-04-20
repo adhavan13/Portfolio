@@ -30,7 +30,7 @@ function NavBar() {
 
   return (
     <motion.nav 
-      className="mt-7 bg-gray-50 bg-opacity-90 backdrop-filter backdrop-blur-lg"
+      className="mt-7 neutral-100 bg-opacity-90 backdrop-filter backdrop-blur-lg"
       initial="hidden"
       animate="visible"
       variants={navbarVariants}
@@ -61,7 +61,7 @@ function NavBar() {
                 whileTap={{ y: 0 }}
                 variants={itemVariants}
               >
-                <span className="text-xs">{item}</span>
+                <span className="text-sm">{item}</span>
               </motion.button>
             ))}
 
