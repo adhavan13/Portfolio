@@ -28,6 +28,7 @@ import SeleniumImage from "../assets/selenium.svg";
 import sqlImage from "../assets/mysql.svg";
 import cImage from "../assets/letter-c.svg";
 import reactImage from "../assets/react.svg";
+import expressImage from "../assets/express.svg";
 
 function Skills() {
   // References and animations
@@ -77,7 +78,7 @@ function Skills() {
   ];
 
   const frameworksDatabase = [
-    { Icon: SiExpress, name: "Express.js", image: "/images/express.png" },
+    { Icon: SiExpress, name: "Express.js", image: expressImage },
     { Icon: SiNodedotjs, name: "Node.js", image: nodejsImage },
     { Icon: SiReact, name: "React.js", image: reactImage },
     { Icon: SiMongodb, name: "MongoDB", image: mongodbImage },
@@ -86,7 +87,6 @@ function Skills() {
 
   const servicesLibraries = [
     { Icon: SiFirebase, name: "Selenium", image: SeleniumImage },
-    // { Icon: SiAws, name: "AWS", image: "/images/aws.png" },
     { Icon: SiGooglecloud, name: "Git hub", image: gitImage },
     { Icon: SiDocker, name: "Docker", image: dockerImage },
   ];

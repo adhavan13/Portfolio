@@ -11,6 +11,7 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
         lato: ["Lato", "sans-serif"],
         spacegrotesk: ["Space Grotesk", "sans-serif"],
+        saira: ["Saira Stencil One", "cursive"],
       },
       fontSize: {
         "2xl": "1.5rem",
