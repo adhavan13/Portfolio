@@ -29,6 +29,9 @@ import sqlImage from "../assets/mysql.svg";
 import cImage from "../assets/letter-c.svg";
 import reactImage from "../assets/react.svg";
 import expressImage from "../assets/express.svg";
+import gcpImage from "../assets/gcc.svg";
+import sciketImage from "../assets/sciket-learn.svg";
+import bigqueryImage from "../assets/bigquery.svg";
 
 function Skills() {
   // References and animations
@@ -83,12 +86,15 @@ function Skills() {
     { Icon: SiReact, name: "React.js", image: reactImage },
     { Icon: SiMongodb, name: "MongoDB", image: mongodbImage },
     { Icon: SiMysql, name: "MySQL", image: sqlImage },
+    { Icon: SiMysql, name: "BigQuery", image: bigqueryImage },
   ];
 
   const servicesLibraries = [
     { Icon: SiFirebase, name: "Selenium", image: SeleniumImage },
-    { Icon: SiGooglecloud, name: "Git hub", image: gitImage },
+    { Icon: SiGit, name: "Sciket-learn", image: sciketImage },
+    { Icon: SiDocker, name: "GCP", image: gcpImage },
     { Icon: SiDocker, name: "Docker", image: dockerImage },
+    { Icon: SiGooglecloud, name: "Git hub", image: gitImage },
   ];
 
   // Render skill item

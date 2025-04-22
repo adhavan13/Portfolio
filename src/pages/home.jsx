@@ -1,19 +1,23 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import NameSection from "../components/nameSection";
-import DecryptedText from "../components/decryptedText";
-import Resume from "/resume.pdf";
 import Skills from "../components/skills";
-import GithubIcon from "../assets/github.svg";
 import WorkExperience from "../components/exprience";
 import ProjectsList from "../components/products";
 import OtherProjects from "../components/projects";
 import Footer from "../components/footer";
 import NavBar from "../components/navBar";
-import SideElements from "../components/sideElements"; // Import the new component
 
 function HomePage() {
   const [activeSection, setActiveSection] = useState("home");
+
+  // Function to scroll to a section
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <motion.div
@@ -24,7 +28,7 @@ function HomePage() {
     >
       <main className="flex-grow">
         <section>
-        <NavBar />
+          <NavBar onNavigate={scrollToSection} />
         </section>
 
         <section id="home">
@@ -33,16 +37,16 @@ function HomePage() {
         <section id="experience" className="mt-28">
           <WorkExperience />
         </section>
-        <section className="mt-12">
+        <section className="mt-12" id="skills">
           <Skills />
         </section>
-        <section>
+        <section id="projects">
           <ProjectsList />
         </section>
-        <section>
+        <section id="otherProjects">
           <OtherProjects />
         </section>
-        <section>
+        <section id="contact">
           <Footer />
         </section>
       </main>

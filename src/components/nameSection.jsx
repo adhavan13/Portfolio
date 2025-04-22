@@ -71,15 +71,15 @@ function NameSection() {
 
   return (
     <motion.div
-      className="flex flex-col font-roboto md:flex-row items-center justify-between w-full max-w-6xl mx-auto py-12 px"
+      className="flex flex-col font-heading md:flex-row items-center justify-between w-full max-w-6xl mx-auto py-12 px"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <div className="w-full md:max-w-6xl space-y-12">
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-1">
           <motion.div
-            className="text-lg md:text-lg text-gray-500 font-medium"
+            className="text-lg font-semibold md:text-lg text-gray-500 font-medium"
             variants={itemVariants}
           >
             <div style={{ marginTop: "4rem" }}>
@@ -100,7 +100,7 @@ function NameSection() {
           >
             <h1>
               <DecryptedText
-                text="Mithuna"
+                text="Adhavan Se V."
                 animateOn="view"
                 speed={150}
                 maxIterations={15}
@@ -125,14 +125,14 @@ function NameSection() {
 
           <div>
             <motion.div
-              className="text-xl md:text-xl text-gray-600 max-w-6xl mt-2"
+              className="text-xl font-roboto md:text-xl text-black max-w-6xl mt-2"
               variants={itemVariants}
             >
               <p>
-                Developed and delivered 3+ client-facing products by building
-                responsive UIs (React) and robust APIs (Node.js/Express),
-                contributing to a 20% reduction in feature delivery time through
-                close collaboration with cross-functional teams.
+                I’m someone who genuinely enjoys solving problems — the tougher,
+                the better. I work mostly on backend systems and data pipelines, making sure
+                everything runs smooth under the hood. I care about writing
+                clean, solid code that actually makes a difference.
               </p>
             </motion.div>
           </div>
