@@ -3,23 +3,26 @@ import React, { useState } from "react";
 export default function WorkExperience() {
   const experiences = [
     {
-      company: "CSED NITC",
-      role: "Web Developer",
-      department: "Department of Computer Science and Engineering NITC",
-      period: "December 2024 - January 2025",
+      company: "Sai Sakthi Enterprises",
+      role: "Software Engineer",
+      department: "Sai Sakthi Enterprises",
+      period: "January 2025 - April 2025",
       responsibilities: [
-        "Co-lead a team of 11 developers and designers to rebuild the official website of the Department of Computer Science and Engineering.",
-        "Managed frontend development and helped create a responsive and visually pleasing website.",
+        "Built and deployed a SaaS analytics platform for brands on Zepto, Blinkit, and Instamart, offering pincode-level insights into stock, visibility, and ranking across 1000+ stores in India; adopted by top D2C brands like Mokobara and Lifelong.",
+        "Designed and implemented fully automated data pipelines using Selenium and GCP (Cloud Run, BigQuery, Scheduler), saving 100+ manual hours/month and ensuring sub-2-hour daily refreshes.",
+        "Led the development of a Shopify Partner App (Remix + BigQuery) for advanced product sorting, increasing catalog engagement by ~30%; listed on the Shopify App Store.",
       ],
     },
+
     {
-      company: "Intecso1",
-      role: "Software Engineer",
-      department: "Product Development",
-      period: "June 2024 - November 2024",
+      company: "Crayon'd",
+      role: "Full Stack Developer Intern ",
+      department: "Crayon'd",
+      period: "September 2024 - March 2024",
       responsibilities: [
-        "Developed and maintained web applications using React and Node.js.",
-        "Collaborated with design team to implement responsive UI components.",
+        "Developed and shipped 3+ client-facing products end-to-end, building responsive user interfaces with React and robust backend services using Node.js/Express, leading to a 20% faster feature delivery across teams.",
+        "Collaborated with designers, PMs, and QA to ensure high-quality releases, contributing to smoother sprints and quicker turnaround times on critical features.",
+        "Followed industry-standard Git workflows, wrote clean, modular code, and optimized API performance—significantly improving maintainability and deployment efficiency.",
       ],
     },
   ];
@@ -28,7 +31,9 @@ export default function WorkExperience() {
 
   return (
     <div className="max-w-6xl mx-auto pt-8">
-      <h1 className="text-4xl font-font-roboto font-bold mb-8">Where I've Worked</h1>
+      <h1 className="text-4xl font-font-roboto font-bold mb-8">
+        Where I've Worked
+      </h1>
 
       <div className="flex flex-col md:flex-row gap-8">
         {/* Left sidebar with list of companies */}
