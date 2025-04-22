@@ -1,19 +1,28 @@
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import eqrevImage from "../assets/eqrev.png";
 
 export default function ProjectsList() {
   const [selectedProject, setSelectedProject] = useState(0);
 
   const projects = [
     {
-      title: "Minerva - CSED NITC",
+      title: "Eq_Rev - Sai Sakthi Enterprises",
       role: "Lead Developer",
-      image: "/api/placeholder/700/400",
+      image: eqrevImage,
       description:
-        "Led a team of 11 developers to successfully rebuild the official website of the Computer Science and Engineering Department at NIT Calicut. This comprehensive overhaul introduced a cutting-edge design and functionality, featuring a headless CMS backend integrated with an intuitive admin panel for seamless content management. The revamped website reflects a modern, professional identity for the department, prioritizing user experience, accessibility, and maintainability while ensuring dynamic and secure content updates.",
-      technologies: ["JavaScript", "React.js", "Strapi", "Gsap"],
-      previewLink: "#",
+        "A data-driven platform I built to help brands on Zepto, Blinkit, and Instamart gain deep visibility into their product performance. It offers store-level and pincode-level analytics on stock availability, listing health, and ad performance across 1000+ stores in India. I automated the entire data pipeline using Selenium and Google Cloud (Cloud Run, BigQuery, Scheduler), enabling daily insights with zero manual effort. Currently trusted by 5+ D2C brands, including Mokobara and Lifelong, to optimize revenue and campaign strategies.",
+      technologies: [
+        "React",
+        "Node.js",
+        "Selenium",
+        "BigQuery",
+        "Google Cloud Run",
+        "Cloud Scheduler",
+        "Cloud Storage",
+      ],
+      previewLink: "https://app.eqrev.com",
     },
   ];
 

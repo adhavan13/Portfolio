@@ -18,7 +18,7 @@ export default function WorkExperience() {
       company: "Crayon'd",
       role: "Full Stack Developer Intern ",
       department: "Crayon'd",
-      period: "September 2024 - March 2024",
+      period: "September 2024 - March 2025",
       responsibilities: [
         "Developed and shipped 3+ client-facing products end-to-end, building responsive user interfaces with React and robust backend services using Node.js/Express, leading to a 20% faster feature delivery across teams.",
         "Collaborated with designers, PMs, and QA to ensure high-quality releases, contributing to smoother sprints and quicker turnaround times on critical features.",
