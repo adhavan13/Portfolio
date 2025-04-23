@@ -57,20 +57,20 @@ export default function WorkExperience() {
 
         {/* Right side with selected experience details */}
         <div className="font-roboto md:w-3/4 ">
-          <div className="mb-4">
-            <h2 className="text-2xl">
-              <span className="text-gray-500">
+          <div className="mb-4 font-bolder">
+            <h2 className="text-4xl ">
+              <span className="font-heading font-bold text-gray-500">
                 {experiences[selectedExp].role}
               </span>{" "}
-              at{" "}
-              <span className="font-bold">
+              <span className="font-bold">at{" "}</span>
+              <span className="underline decoration-2 decoration-gray-500 font-bold">
                 {experiences[selectedExp].department}
               </span>
             </h2>
-            <p className="text-lg mb-6">{experiences[selectedExp].period}</p>
+            <p className="text-xl mb-6 font-bold">{experiences[selectedExp].period}</p>
           </div>
 
-          <ul className="list-disc ml-5 space-y-3">
+          <ul className="list-disc ml-5 space-y-3 font-heading">
             {experiences[selectedExp].responsibilities.map((resp, i) => (
               <li key={i}>{resp}</li>
             ))}

@@ -71,7 +71,7 @@ function NameSection() {
 
   return (
     <motion.div
-      className="flex flex-col font-heading md:flex-row items-center justify-between w-full max-w-6xl mx-auto py-12 px"
+      className="flex flex-col font-heading md:flex-row items-center justify-between w-full max-w-6xl  py-12 px"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -100,7 +100,7 @@ function NameSection() {
           >
             <h1>
               <DecryptedText
-                text="Adhavan Se V."
+                text="Adhavan Se V"
                 animateOn="view"
                 speed={150}
                 maxIterations={15}

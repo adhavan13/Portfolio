@@ -21,35 +21,44 @@ function HomePage() {
 
   return (
     <motion.div
-      className="flex flex-col text-black min-h-screen neutral-100"
+      className="flex flex-col text-black min-h-screen w-full neutral-100"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <main className="flex-grow">
-        <section>
-          <NavBar onNavigate={scrollToSection} />
-        </section>
+      {/* <div className="flex-grow w-full"> */}
+      <section className="w-full ">
+        <NavBar onNavigate={scrollToSection} />
+      </section>
 
-        <section id="home">
-          <NameSection />
-        </section>
-        <section id="experience" className="mt-28">
-          <WorkExperience />
-        </section>
-        <section className="mt-12" id="skills">
-          <Skills />
-        </section>
-        <section id="projects">
-          <ProjectsList />
-        </section>
-        <section id="otherProjects">
-          <OtherProjects />
-        </section>
-        <section id="contact">
-          <Footer />
-        </section>
-      </main>
+      <div className="flex w-full">
+        <div style={{ width: "5%" }} className="flex"></div>
+        <div
+          style={{ width: "90%" }}
+          className="flex flex-col w-[10%]  flex items-center justify-center overflow-hidden"
+        >
+          <section id="home">
+            <NameSection />
+          </section>
+          <section id="experience" className="mt-28">
+            <WorkExperience />
+          </section>
+          <section className="mt-12 w-full" id="skills">
+            <Skills />
+          </section>
+          <section id="products" className="w-full">
+            <ProjectsList />
+          </section>
+          <section id="projects" className="w-full">
+            <OtherProjects />
+          </section>
+          <section id="contact" className="w-full">
+            <Footer />
+          </section>
+        </div>
+        <div style={{ width: "5%" }} className="flex"></div>
+        {/* </div>   */}
+      </div>
     </motion.div>
   );
 }

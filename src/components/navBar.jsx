@@ -3,7 +3,7 @@ import DecryptedText from "./decryptedText";
 import { motion } from "framer-motion";
 import Resume from "/resume.pdf";
 
-function NavBar({onNavigate}) {
+function NavBar({ onNavigate }) {
   const [activeSection, setActiveSection] = useState("home");
 
   // Animation variants
@@ -52,7 +52,7 @@ function NavBar({onNavigate}) {
           </motion.div>
 
           <div className="hidden md:flex space-x-6 text-gray-600">
-            {["Experience", "Skills", "Projects", "Contact"].map(
+            {["Experience", "Skills", "Products", "Projects", "Contact"].map(
               (item, index) => (
                 <motion.button
                   key={item}

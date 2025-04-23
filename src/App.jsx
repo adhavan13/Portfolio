@@ -4,7 +4,7 @@ import HomePage from "./pages/home";
 import CodeLoadingScreen from "./components/loading";
 
 function App() {
-  return <CodeLoadingScreen />;
+  return <HomePage />;
 }
 
 export default App;

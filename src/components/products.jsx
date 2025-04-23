@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import eqrevImage from "../assets/eqrev.png";
+import eqrevImage from "../assets/eqrev.jpg";
 
 export default function ProjectsList() {
   const [selectedProject, setSelectedProject] = useState(0);
@@ -21,6 +21,24 @@ export default function ProjectsList() {
         "Google Cloud Run",
         "Cloud Scheduler",
         "Cloud Storage",
+      ],
+      previewLink: "https://app.eqrev.com",
+    },
+    {
+      title: "Eq_Rev - Sai Sakthi Enterprises",
+      role: "Lead Developer",
+      image: eqrevImage,
+      description:
+        "Built a high-performance data extraction system automating 25+ end-to-end jobs across seller dashboards with Python, Selenium, JavaScript, BigQuery, and Cloud Run. These automated jobs fetch data through API calls and web scraping, delivering real-time insights in under 1 hour—saving 24+ hours of manual effort. The system runs on a fully schedulable, trigger-free architecture, enabling time-sensitive analytics with cryptographic encryption and seamless cloud integration for scalable operations.",
+      technologies: [
+        "Python ",
+        "Selenium ",
+        "JavaScript",
+        "BigQuery   ",
+        "Google Cloud Run",
+        "Cloud Scheduler",
+        "Cloud Storage",
+        "Cryptography",
       ],
       previewLink: "https://app.eqrev.com",
     },
@@ -133,13 +151,17 @@ export default function ProjectsList() {
             <div className="lg:w-1/2 p-8">
               <ScrollAnimation delay={0.2}>
                 <div className="mb-2">
-                  <p className="text-gray-600">{project.role}</p>
+                  <p className="text-gray-600 font-spacegrotesk font-bold">
+                    {project.role}
+                  </p>
                   <h2 className="text-2xl font-bold">{project.title}</h2>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.3}>
-                <p className="mb-6 text-gray-800">{project.description}</p>
+                <p className="mb-6 text-black font-semibold">
+                  {project.description}
+                </p>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.4}>
@@ -160,6 +182,8 @@ export default function ProjectsList() {
               <ScrollAnimation delay={0.5}>
                 <a
                   href={project.previewLink}
+                  target="_blank"
+                  rel="noopener noreferrer" 
                   className="inline-block px-6 py-2 border-2 border-black font-medium rounded-md hover:bg-black hover:text-white transition-colors"
                 >
                   Preview

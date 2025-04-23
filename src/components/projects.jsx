@@ -50,18 +50,13 @@ export default function OtherProjects() {
       githubLink: "#",
     },
     {
-      title: "Portfolio CMS",
+      title: "Coding Helper Telegram Bot",
+      subtitle: " ",
       description:
-        "A content management system specifically designed for developers to create and manage their portfolios easily. Features drag-and-drop components, live preview, and GitHub integration for project showcasing.",
-      technologies: ["React", "Firebase", "TypeScript", "Tailwind"],
-      githubLink: "#",
-    },
-    {
-      title: "AI Study Assistant",
-      description:
-        "An AI-powered study assistant that helps students organize notes, create flashcards, and generate practice questions based on their learning materials. Uses natural language processing to understand and respond to educational content.",
-      technologies: ["Python", "TensorFlow", "Flask", "MongoDB"],
-      githubLink: "#",
+        "Created an AI-powered Telegram bot to assist with coding doubts in real-time. Users can ask questions on programming concepts, syntax, or logic, and get clear, instant explanations. Designed to support learners and developers with 24/7 accessible, conversational coding help—like having a tutor in your pocket.",
+      technologies: ["Python", "Telegram", "gemini-1.5-pro", "Long polling"],
+      githubLink: "https://github.com/adhavan13/telegramBotMessagePython",
+      appLink: "https://t.me/geekCoder_bot",
     },
   ];
 
@@ -136,7 +131,7 @@ export default function OtherProjects() {
   return (
     <motion.div
       id="projects-section"
-      className="w-full py-12 px-4 md:px-8 lg:px-32"
+      className="w-full py-12 px-4 md:px-8 lg:px-16"
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
@@ -166,7 +161,7 @@ export default function OtherProjects() {
                   <div className="flex justify-between items-start mb-2">
                     <div>
                       <h3 className="text-xl font-bold">{project.title}</h3>
-                      <p className="text-sm text-gray-500 mt-1">
+                      <p className="text-sm text-gray-500 mt-1 font-spacegrotesk font-bold">
                         {project.subtitle || "Project subtitle"}
                       </p>
                     </div>
@@ -190,7 +185,7 @@ export default function OtherProjects() {
                       {project.technologies.map((tech, i) => (
                         <motion.span
                           key={i}
-                          className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-md"
+                          className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-md "
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: 0.3, delay: 0.3 + i * 0.05 }}
