@@ -9,27 +9,38 @@ export default function OtherProjects() {
 
   const projects = [
     {
-      title: "NITC-RISC24",
+      title: "Growth Guardian",
+      subtitle: "HackIt’25 Winner",
       description:
-        "NITC-RISC24 is a 16-bit reduced instruction set processor built as a part of NIT Calicut's 'Computer Architecture' course. Written in Verilog, the processor can perform various simple functions, with a streamlined multicycle pipeline for executing arithmetic and logic instructions efficiently.",
-      technologies: ["Verilog", "Icarus"],
-      githubLink: "#",
-    },
-    {
-      title: "FLIX",
-      description:
-        "Flix is a movie recommender app using the MovieLens database to provide personalized recommendations based on user preferences. It employs collaborative filtering and a correlation matrix from user ratings. Features include a recommendation engine and data visualization for insights into movie ratings, genres etc.",
+        "Led the development of a full-stack financial management platform with live market integration. Integrated 5+ tools, including a 95% accurate scam detector, smart chatbot, ML-powered stock simulator, and gamified learning modules to help users learn, practice, and make informed financial decisions confidently.",
       technologies: [
-        "JavaScript",
-        "Python",
         "React.js",
         "Node.js",
-        "FastAPI",
-        "SciKit",
-        "Seaborn",
-        "MathPlotLib",
+        "MongoDB",
+        "Python",
+        "Flask",
+        "Express.js",
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/adhavan13/hackItFinTech",
+      appLink: "https://growth-guardian.vercel.app/",
+    },
+    {
+      title: "India Post AI Platform",
+      subtitle: "Smart India Hackathon 2024 Finalist",
+      description:
+        "Built with Next.js, LightGBM, and RAG chatbot, this platform personalizes India Post’s outreach across 600K+ villages. It recommends top-3 schemes per user, automates demographic and trend analysis via ETL and Selenium, cutting manual work by 80% and boosting efficiency by 40%.",
+      technologies: [
+        "Next.js",
+        "Python",
+        "React.js",
+        "Rag",
+        "MongoDB",
+        "PostgreSQL",
+        "LightGBM",
+        "Selenium",
+      ],
+      githubLink: "https://github.com/girish-gaikwad/PostalService",
+      appLink: "https://github.com/girish-gaikwad/PostalService",
     },
     {
       title: "Movie Match",
@@ -152,10 +163,17 @@ export default function OtherProjects() {
                 exit={{ opacity: 0, y: -20, transition: { duration: 0.3 } }}
               >
                 <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold">{project.title}</h3>
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <h3 className="text-xl font-bold">{project.title}</h3>
+                      <p className="text-sm text-gray-500 mt-1">
+                        {project.subtitle || "Project subtitle"}
+                      </p>
+                    </div>
                     <a
                       href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center justify-center border border-gray-300 rounded-md p-2 hover:bg-gray-100 transition-colors"
                       aria-label="Visit GitHub repository"
                     >
@@ -163,7 +181,7 @@ export default function OtherProjects() {
                     </a>
                   </div>
 
-                  <p className="text-gray-600 mb-4 h-48 overflow-y-auto">
+                  <p className="text-gray-600 mb-4 h-48 overflow-y-auto mt-2">
                     {project.description}
                   </p>
 
@@ -186,7 +204,9 @@ export default function OtherProjects() {
 
                 <div className="border-t border-gray-200 p-4">
                   <a
-                    href={project.githubLink}
+                    href={project.appLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-center block text-gray-700 hover:text-black font-medium"
                   >
                     Visit
