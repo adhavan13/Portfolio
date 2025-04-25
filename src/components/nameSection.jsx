@@ -7,7 +7,7 @@ import { SiLeetcode } from "react-icons/si";
 import Resume from "/resume.pdf";
 
 function NameSection() {
-  const roles = [" developer", " inventor", " coder"];
+  const roles = ["developer", "creator", "strategist", "Analyst"];
   const [displayText, setDisplayText] = useState("");
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -130,9 +130,9 @@ function NameSection() {
             >
               <p>
                 I’m someone who genuinely enjoys solving problems — the tougher,
-                the better. I work mostly on backend systems and data pipelines, making sure
-                everything runs smooth under the hood. I care about writing
-                clean, solid code that actually makes a difference.
+                the better. I work mostly on backend systems and data pipelines,
+                making sure everything runs smooth under the hood. I care about
+                writing clean, solid code that actually makes a difference.
               </p>
             </motion.div>
           </div>

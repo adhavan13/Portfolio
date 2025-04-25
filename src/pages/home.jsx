@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import NameSection from "../components/nameSection";
 import Skills from "../components/skills";
@@ -10,6 +10,23 @@ import NavBar from "../components/navBar";
 
 function HomePage() {
   const [activeSection, setActiveSection] = useState("home");
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if screen is mobile on mount and when resized
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Function to scroll to a section
   const scrollToSection = (sectionId) => {
@@ -19,6 +36,17 @@ function HomePage() {
     }
   };
 
+  // Dynamic styles based on screen size
+  const sideSpacerStyle = {
+    width: isMobile ? "0%" : "5%",
+    display: isMobile ? "none" : "block",
+  };
+
+  const mainContentStyle = {
+    width: isMobile ? "100%" : "90%",
+    padding: isMobile ? "0 16px" : "0",
+  };
+
   return (
     <motion.div
       className="flex flex-col text-black min-h-screen w-full neutral-100"
@@ -26,21 +54,23 @@ function HomePage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* <div className="flex-grow w-full"> */}
-      <section className="w-full ">
+      <section className="w-full">
         <NavBar onNavigate={scrollToSection} />
       </section>
 
       <div className="flex w-full">
-        <div style={{ width: "5%" }} className="flex"></div>
+        {/* Left spacer */}
+        <div style={sideSpacerStyle} className="flex"></div>
+
+        {/* Main content */}
         <div
-          style={{ width: "90%" }}
-          className="flex flex-col w-[10%]  flex items-center justify-center overflow-hidden"
+          style={mainContentStyle}
+          className="flex flex-col items-center justify-center overflow-hidden"
         >
           <section id="home">
             <NameSection />
           </section>
-          <section id="experience" className="mt-28">
+          <section id="experience" className={isMobile ? "mt-20" : "mt-28"}>
             <WorkExperience />
           </section>
           <section className="mt-12 w-full" id="skills">
@@ -56,8 +86,9 @@ function HomePage() {
             <Footer />
           </section>
         </div>
-        <div style={{ width: "5%" }} className="flex"></div>
-        {/* </div>   */}
+
+        {/* Right spacer */}
+        <div style={sideSpacerStyle} className="flex"></div>
       </div>
     </motion.div>
   );

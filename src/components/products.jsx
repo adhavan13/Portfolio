@@ -29,7 +29,7 @@ export default function ProjectsList() {
       role: "Lead Developer",
       image: eqrevImage,
       description:
-        "Built a high-performance data extraction system automating 25+ end-to-end jobs across seller dashboards with Python, Selenium, JavaScript, BigQuery, and Cloud Run. These automated jobs fetch data through API calls and web scraping, delivering real-time insights in under 1 hour—saving 24+ hours of manual effort. The system runs on a fully schedulable, trigger-free architecture, enabling time-sensitive analytics with cryptographic encryption and seamless cloud integration for scalable operations.",
+        "Built a high-performance data extraction system automating 25+ end-to-end jobs across seller dashboards and quickcommerce platforms with Python, Selenium, JavaScript, BigQuery, and Cloud Run. These automated jobs fetch data through API calls and web scraping, delivering real-time insights in under 1 hour—saving 24+ hours of manual effort. The system runs on a fully schedulable, trigger-free architecture, enabling time-sensitive analytics with cryptographic encryption and seamless cloud integration for scalable operations.",
       technologies: [
         "Python ",
         "Selenium ",
@@ -183,7 +183,7 @@ export default function ProjectsList() {
                 <a
                   href={project.previewLink}
                   target="_blank"
-                  rel="noopener noreferrer" 
+                  rel="noopener noreferrer"
                   className="inline-block px-6 py-2 border-2 border-black font-medium rounded-md hover:bg-black hover:text-white transition-colors"
                 >
                   Preview

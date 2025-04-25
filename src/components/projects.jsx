@@ -42,13 +42,7 @@ export default function OtherProjects() {
       githubLink: "https://github.com/girish-gaikwad/PostalService",
       appLink: "https://github.com/girish-gaikwad/PostalService",
     },
-    {
-      title: "Movie Match",
-      description:
-        "Movie Match, winners of GDSC Bit'N'Build Kerala Hackathon, offers a vast, daily-updated movie database from 1940 to mid-2023. Powered by GPT-4-turbo, it provides personalized recommendations and detailed info pages with reviews, IMDB links, and streaming service details for a seamless experience.",
-      technologies: ["JavaScript", "Python", "Node.js", "GPT-4"],
-      githubLink: "#",
-    },
+
     {
       title: "Coding Helper Telegram Bot",
       subtitle: " ",
@@ -212,7 +206,7 @@ export default function OtherProjects() {
           </AnimatePresence>
         </motion.div>
 
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait">
           <motion.div
             key={showAll ? "show-less" : "show-more"}
             className="flex justify-center mt-10"
@@ -229,7 +223,7 @@ export default function OtherProjects() {
               {showAll ? "Show Less" : "Show More"}
             </button>
           </motion.div>
-        </AnimatePresence>
+        </AnimatePresence> */}
       </div>
     </motion.div>
   );
