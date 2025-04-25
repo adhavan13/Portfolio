@@ -76,7 +76,7 @@ export default function ContactSection() {
             <a
               href="https://calendly.com/adhavankannan10/30min"
               target="_blank"
-              className="p-2 w-24 font-special text-center text-sm bg-black border border-gray-500 text-white rounded-md hover:bg-gray-50 hover:text-black transition-colors"
+              className="p-2 w-24 font-special text-center text-sm bg-black border border-zinc-200 text-white rounded-md hover:bg-gray-50 hover:text-black transition-colors"
             >
               Talk()
             </a>

@@ -49,7 +49,7 @@ function HomePage() {
 
   return (
     <motion.div
-      className="flex flex-col text-black min-h-screen w-full neutral-100"
+      className="flex flex-col text-black min-h-screen w-full bg-neutral-400"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

@@ -1,18 +1,17 @@
-import React, { useState } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import eqrevImage from "../assets/eqrev.jpg";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import eqrevImage from "../assets/eqrev.jpg"; // Import your image here
 
-export default function ProjectsList() {
-  const [selectedProject, setSelectedProject] = useState(0);
-
+const ProjectsList = () => {
+  // Sample project data
   const projects = [
     {
+      id: 1,
       title: "Eq_Rev - Sai Sakthi Enterprises",
       role: "Lead Developer",
-      image: eqrevImage,
       description:
         "A data-driven platform I built to help brands on Zepto, Blinkit, and Instamart gain deep visibility into their product performance. It offers store-level and pincode-level analytics on stock availability, listing health, and ad performance across 1000+ stores in India. I automated the entire data pipeline using Selenium and Google Cloud (Cloud Run, BigQuery, Scheduler), enabling daily insights with zero manual effort. Currently trusted by 5+ D2C brands, including Mokobara and Lifelong, to optimize revenue and campaign strategies.",
+      image: eqrevImage, // Replace with your image path
       technologies: [
         "React",
         "Node.js",
@@ -25,174 +24,116 @@ export default function ProjectsList() {
       previewLink: "https://app.eqrev.com",
     },
     {
+      id: 1,
       title: "Eq_Rev - Sai Sakthi Enterprises",
       role: "Lead Developer",
-      image: eqrevImage,
       description:
-        "Built a high-performance data extraction system automating 25+ end-to-end jobs across seller dashboards and quickcommerce platforms with Python, Selenium, JavaScript, BigQuery, and Cloud Run. These automated jobs fetch data through API calls and web scraping, delivering real-time insights in under 1 hour—saving 24+ hours of manual effort. The system runs on a fully schedulable, trigger-free architecture, enabling time-sensitive analytics with cryptographic encryption and seamless cloud integration for scalable operations.",
+        "A data-driven platform I built to help brands on Zepto, Blinkit, and Instamart gain deep visibility into their product performance. It offers store-level and pincode-level analytics on stock availability, listing health, and ad performance across 1000+ stores in India. I automated the entire data pipeline using Selenium and Google Cloud (Cloud Run, BigQuery, Scheduler), enabling daily insights with zero manual effort. Currently trusted by 5+ D2C brands, including Mokobara and Lifelong, to optimize revenue and campaign strategies.",
+      image: eqrevImage, // Replace with your image path
       technologies: [
-        "Python ",
-        "Selenium ",
-        "JavaScript",
-        "BigQuery   ",
+        "React",
+        "Node.js",
+        "Selenium",
+        "BigQuery",
         "Google Cloud Run",
         "Cloud Scheduler",
         "Cloud Storage",
-        "Cryptography",
       ],
       previewLink: "https://app.eqrev.com",
     },
   ];
 
-  // Create a reusable animation component that animates on every scroll
-  const ScrollAnimation = ({ children, className, delay = 0 }) => {
-    const controls = useAnimation();
-    const [ref, inView] = useInView({
-      triggerOnce: false, // Animation triggers every time
-      threshold: 0.1,
-    });
-
-    React.useEffect(() => {
-      if (inView) {
-        controls.start({
-          y: 0,
-          opacity: 1,
-          transition: {
-            duration: 0.6,
-            ease: "easeOut",
-            delay: delay,
-          },
-        });
-      } else {
-        // Reset animation when element is out of view
-        controls.start({
-          y: 50,
-          opacity: 0,
-          transition: {
-            duration: 0.3,
-          },
-        });
-      }
-    }, [controls, inView, delay]);
-
-    return (
-      <motion.div
-        ref={ref}
-        initial={{ y: 50, opacity: 0 }}
-        animate={controls}
-        className={className}
-      >
-        {children}
-      </motion.div>
-    );
-  };
-
-  const ImageAnimation = ({ src, alt, className }) => {
-    const controls = useAnimation();
-    const [ref, inView] = useInView({
-      triggerOnce: false, // Animation triggers every time
-      threshold: 0.1,
-    });
-
-    React.useEffect(() => {
-      if (inView) {
-        controls.start({
-          scale: 1,
-          opacity: 1,
-          transition: {
-            duration: 0.7,
-            ease: "easeOut",
-          },
-        });
-      } else {
-        // Reset animation when element is out of view
-        controls.start({
-          scale: 0.9,
-          opacity: 0,
-          transition: {
-            duration: 0.3,
-          },
-        });
-      }
-    }, [controls, inView]);
-
-    return (
-      <motion.img
-        ref={ref}
-        src={src}
-        alt={alt}
-        className={className}
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={controls}
-      />
-    );
-  };
-
   return (
-    <div className="max-w-6xl mx-auto">
-      <ScrollAnimation className="mb-12">
-        <h1 className="text-4xl font-bold">Some Things I've Built</h1>
-      </ScrollAnimation>
+    <div className="w-full max-w-6xl mx-auto">
+      <motion.h1
+        className="text-3xl font-heading font-bold mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Some Things I've Built
+      </motion.h1>
 
-      <div className="space-y-24">
+      <div className="space-y-20 ">
         {projects.map((project, index) => (
-          <ScrollAnimation
-            key={index}
-            className="flex flex-col lg:flex-row border-r border-gray-200 rounded-lg overflow-hidden shadow-lg"
-          >
-            <div className="lg:w-1/2 overflow-hidden">
-              <ImageAnimation
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="lg:w-1/2 p-8">
-              <ScrollAnimation delay={0.2}>
-                <div className="mb-2">
-                  <p className="text-gray-600 font-spacegrotesk font-bold">
-                    {project.role}
-                  </p>
-                  <h2 className="text-2xl font-bold">{project.title}</h2>
-                </div>
-              </ScrollAnimation>
-
-              <ScrollAnimation delay={0.3}>
-                <p className="mb-6 text-black font-semibold">
-                  {project.description}
-                </p>
-              </ScrollAnimation>
-
-              <ScrollAnimation delay={0.4}>
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 bg-gray-200 text-gray-800 text-sm rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </ScrollAnimation>
-
-              <ScrollAnimation delay={0.5}>
-                <a
-                  href={project.previewLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-2 border-2 border-black font-medium rounded-md hover:bg-black hover:text-white transition-colors"
-                >
-                  Preview
-                </a>
-              </ScrollAnimation>
-            </div>
-          </ScrollAnimation>
+          <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
     </div>
   );
-}
+};
+
+const ProjectCard = ({ project, index }) => {
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: true, amount: 0.3 });
+
+  const imageVariants = {
+    hidden: { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, delay: 0.2 },
+    },
+  };
+
+  const contentVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, delay: 0.4 },
+    },
+  };
+
+  return (
+    <motion.div
+      className="flex flex-row md:flex-row gap-8 relative border-r-4 border-zinc-200 pr-2"
+      ref={cardRef}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
+      {/* Project image */}
+      <motion.div
+        className="flex flex-row  items-center justify-center w-full md:w-1/2 "
+        variants={imageVariants}
+        style={{ width: "50%" }}
+      >
+        {/* Replace with actual image */}
+        <img src={project.image} alt={project.title} className="w-full h-64 border-l-4 zinc-200" />
+      </motion.div>
+
+      {/* Project content */}
+      <motion.div
+        className="w-full md:w-1/2 flex flex-col justify-center"
+        variants={contentVariants}
+        style={{ width: "50%" }}
+      >
+        <div className="text-gray-500 mb-1 font-mono">{project.role}</div>
+        <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
+
+        <p className="text-gray-700 mb-6">{project.description}</p>
+
+        <div className="flex flex-wrap gap-2 mb-6 font-mono text-sm text-gray-600">
+          {project.technologies.map((tech, i) => (
+            <span key={i} className="px-2 py-1 bg-gray-100 rounded">
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <motion.a
+          href={project.previewLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-2 border border-black rounded-md hover:bg-black hover:text-white transition-colors w-max"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Preview
+        </motion.a>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+export default ProjectsList;

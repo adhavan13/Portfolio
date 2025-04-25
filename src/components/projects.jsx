@@ -44,7 +44,7 @@ export default function OtherProjects() {
     },
 
     {
-      title: "Coding Helper Telegram Bot",
+      title: "Geek Coder",
       subtitle: " ",
       description:
         "Created an AI-powered Telegram bot to assist with coding doubts in real-time. Users can ask questions on programming concepts, syntax, or logic, and get clear, instant explanations. Designed to support learners and developers with 24/7 accessible, conversational coding help—like having a tutor in your pocket.",
@@ -123,6 +123,7 @@ export default function OtherProjects() {
   };
 
   return (
+    
     <motion.div
       id="projects-section"
       className="w-full py-12 px-4 md:px-8 lg:px-16"
@@ -131,7 +132,7 @@ export default function OtherProjects() {
       variants={containerVariants}
     >
       <motion.h1
-        className="text-4xl font-bold mb-12 px-6"
+        className="text-3xl font-heading font-bold mb-12 px-6"
         variants={titleVariants}
       >
         Other Projects

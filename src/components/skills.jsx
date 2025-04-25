@@ -124,7 +124,7 @@ function Skills() {
           />
         }
       </motion.div>
-      <span className="text-gray-600 text-sm font-medium mt-1">
+      <span className="text-gray-600 text-lm font-bold mt-1">
         {item.name}
       </span>
     </motion.div>
@@ -141,7 +141,7 @@ function Skills() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-4xl font-roboto font-bold mb-8"
+          className="text-3xl font-heading font-bold mb-8"
         >
           Languages I speak
         </motion.h2>
@@ -163,7 +163,7 @@ function Skills() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-4xl font-roboto font-bold mb-8"
+          className="text-3xl font-heading font-bold mb-8"
         >
           Frameworks & Databases I Love
         </motion.h2>
@@ -187,7 +187,7 @@ function Skills() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-4xl font-roboto font-bold mb-8"
+          className="text-3xl font-heading font-bold mb-8"
         >
           Libraries & Services I Use
         </motion.h2>
