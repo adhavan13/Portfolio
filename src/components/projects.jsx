@@ -50,7 +50,7 @@ export default function OtherProjects() {
         "Created an AI-powered Telegram bot to assist with coding doubts in real-time. Users can ask questions on programming concepts, syntax, or logic, and get clear, instant explanations. Designed to support learners and developers with 24/7 accessible, conversational coding help—like having a tutor in your pocket.",
       technologies: ["Python", "Telegram", "gemini-1.5-pro", "Long polling"],
       githubLink: "https://github.com/adhavan13/telegramBotMessagePython",
-      appLink: "https://t.me/geekCoder_bot",
+      appLink: "https://t.me/my_code_learner_bot",
     },
   ];
 

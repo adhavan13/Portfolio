@@ -20,7 +20,9 @@ export default function ContactSection() {
             {/* Email section */}
             <div className="flex items-start space-x-3">
               <div>
-                <p className="text-gray-600 text-xl sm:text-2xl">Send me an email at</p>
+                <p className="text-gray-600 text-xl sm:text-2xl">
+                  Send me an email at
+                </p>
                 <a
                   href="mailto:adhavankannan10@gmail.com"
                   className="text-xl sm:text-2xl font-medium font-saira hover:underline break-words"
