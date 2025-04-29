@@ -20,7 +20,9 @@ export default function ContactSection() {
             {/* Email section */}
             <div className="flex items-start space-x-3">
               <div>
-                <p className="text-gray-600 text-xl sm:text-2xl">Send me an email at</p>
+                <p className="text-gray-600 text-xl sm:text-2xl">
+                  Send me an email at
+                </p>
                 <a
                   href="mailto:adhavankannan10@gmail.com"
                   className="text-xl sm:text-2xl font-medium font-saira hover:underline break-words"
@@ -76,7 +78,7 @@ export default function ContactSection() {
             <a
               href="https://calendly.com/adhavankannan10/30min"
               target="_blank"
-              className="p-2 w-24 font-special text-center text-sm bg-black border border-gray-500 text-white rounded-md hover:bg-gray-50 hover:text-black transition-colors"
+              className="p-2 w-24 font-special text-center text-sm bg-black border border-zinc-200 text-white rounded-md hover:bg-gray-50 hover:text-black transition-colors"
             >
               Talk()
             </a>
