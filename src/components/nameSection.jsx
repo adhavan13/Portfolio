@@ -112,7 +112,7 @@ function NameSection() {
           </motion.div>
 
           <motion.div
-            className="text-4xl md:text-6xl font-semibold text-gray-500"
+            className="text-2xl md:text-6xl font-semibold text-gray-500"
             variants={itemVariants}
           >
             <p className="flex items-center">
@@ -126,7 +126,7 @@ function NameSection() {
 
           <div>
             <motion.div
-              className="text-xl font-roboto md:text-xl text-black max-w-6xl mt-2"
+              className="text-sm font-roboto md:text-xl text-black max-w-6xl mt-2"
               variants={itemVariants}
             >
               <p>
