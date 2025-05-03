@@ -10,7 +10,7 @@ export default function OtherProjects() {
   const projects = [
     {
       title: "Growth Guardian",
-      subtitle: "HackIt’25 Winner",
+      subtitle: "HackIt'25 Winner",
       description:
         "Led the development of a full-stack financial management platform with live market integration. Integrated 5+ tools, including a 95% accurate scam detector, smart chatbot, ML-powered stock simulator, and gamified learning modules to help users learn, practice, and make informed financial decisions confidently.",
       technologies: [
@@ -28,7 +28,7 @@ export default function OtherProjects() {
       title: "India Post AI Platform",
       subtitle: "Smart India Hackathon 2024 Finalist",
       description:
-        "Built with Next.js, LightGBM, and RAG chatbot, this platform personalizes India Post’s outreach across 600K+ villages. It recommends top-3 schemes per user, automates demographic and trend analysis via ETL and Selenium, cutting manual work by 80% and boosting efficiency by 40%.",
+        "Built with Next.js, LightGBM, and RAG chatbot, this platform personalizes India Post's outreach across 600K+ villages. It recommends top-3 schemes per user, automates demographic and trend analysis via ETL and Selenium, cutting manual work by 80% and boosting efficiency by 40%.",
       technologies: [
         "Next.js",
         "Python",
@@ -93,54 +93,53 @@ export default function OtherProjects() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2,
+        delayChildren: 0.1,
         when: "beforeChildren",
       },
     },
   };
 
   const childVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
       },
     },
   };
 
   const titleVariants = {
-    hidden: { opacity: 0, y: -30 },
+    hidden: { opacity: 0, y: -20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         ease: "easeOut",
       },
     },
   };
 
   return (
-    
     <motion.div
       id="projects-section"
-      className="w-full py-12 px-4 md:px-8 lg:px-16"
+      className="w-full py-6 sm:py-8 md:py-12 px-3 sm:px-4 md:px-8 lg:px-16"
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
     >
       <motion.h1
-        className="text-3xl font-heading font-bold mb-12 px-6"
+        className="text-xl sm:text-2xl md:text-3xl font-heading font-bold mb-6 sm:mb-8 md:mb-12 px-2 sm:px-4 md:px-6 text-center sm:text-left"
         variants={titleVariants}
       >
         Other Projects
       </motion.h1>
 
-      <div className="px-6">
+      <div className="px-0 sm:px-2 md:px-6">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
           variants={containerVariants}
         >
           <AnimatePresence mode="wait">
@@ -152,11 +151,13 @@ export default function OtherProjects() {
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 exit={{ opacity: 0, y: -20, transition: { duration: 0.3 } }}
               >
-                <div className="p-6">
+                <div className="p-4 sm:p-5 md:p-6">
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h3 className="text-xl font-bold">{project.title}</h3>
-                      <p className="text-sm text-gray-500 mt-1 font-spacegrotesk font-bold">
+                      <h3 className="text-lg sm:text-xl font-bold">
+                        {project.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-gray-500 mt-1 font-spacegrotesk font-bold">
                         {project.subtitle || "Project subtitle"}
                       </p>
                     </div>
@@ -164,26 +165,26 @@ export default function OtherProjects() {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center border border-gray-300 rounded-md p-2 hover:bg-gray-100 transition-colors"
+                      className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 hover:bg-gray-100 transition-colors"
                       aria-label="Visit GitHub repository"
                     >
-                      <Github size={20} />
+                      <Github size={18} />
                     </a>
                   </div>
 
-                  <p className="text-gray-600 mb-4 h-48 overflow-y-auto mt-2">
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-3 sm:mb-4 h-32 sm:h-40 md:h-48 overflow-y-auto mt-2 pr-1">
                     {project.description}
                   </p>
 
                   <div className="mt-auto">
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       {project.technologies.map((tech, i) => (
                         <motion.span
                           key={i}
-                          className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-md "
+                          className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-gray-100 text-gray-600 text-xs rounded-md"
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.3, delay: 0.3 + i * 0.05 }}
+                          transition={{ duration: 0.3, delay: 0.2 + i * 0.03 }}
                         >
                           {tech}
                         </motion.span>
@@ -192,12 +193,12 @@ export default function OtherProjects() {
                   </div>
                 </div>
 
-                <div className="border-t border-gray-200 p-4">
+                <div className="border-t border-gray-200 p-3 sm:p-4">
                   <a
                     href={project.appLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-center block text-gray-700 hover:text-black font-medium"
+                    className="text-center block text-gray-700 hover:text-black text-sm sm:text-base font-medium"
                   >
                     Visit
                   </a>
@@ -207,10 +208,11 @@ export default function OtherProjects() {
           </AnimatePresence>
         </motion.div>
 
+        {/* Show More/Less Button (commented out in original) */}
         {/* <AnimatePresence mode="wait">
           <motion.div
             key={showAll ? "show-less" : "show-more"}
-            className="flex justify-center mt-10"
+            className="flex justify-center mt-6 sm:mt-8 md:mt-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -219,7 +221,7 @@ export default function OtherProjects() {
           >
             <button
               onClick={toggleShowProjects}
-              className="px-6 py-3 bg-white border border-gray-300 rounded-md shadow-sm text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+              className="px-4 sm:px-6 py-2 sm:py-3 bg-white border border-gray-300 rounded-md shadow-sm text-gray-700 text-sm sm:text-base font-medium hover:bg-gray-50 transition-colors"
             >
               {showAll ? "Show Less" : "Show More"}
             </button>
