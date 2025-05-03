@@ -5,6 +5,7 @@ import LinkedInIcon from "../assets/linkedin.svg";
 import GithubIcon from "../assets/github.svg";
 import { SiLeetcode } from "react-icons/si";
 import Resume from "/resume.pdf";
+import avatarImage from "../assets/avatar.svg";
 
 function NameSection() {
   const roles = ["developer", "creator", "strategist", "Analyst"];
@@ -185,27 +186,33 @@ function NameSection() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <svg viewBox="0 0 300 300" className="w-64 h-64 md:w-80 md:h-80">
+        {/* <svg viewBox="0 0 300 300" className="w-64 h-64 md:w-80 md:h-80">
+          {avatarImage}
           {/* You can replace this with your own avatar SVG or an image */}
-          <path
-            d="M150,30 C70,30 20,100 20,200 C20,290 80,280 150,280 C220,280 280,290 280,200 C280,100 230,30 150,30 Z"
-            fill="#222"
-          />
-          <circle cx="120" cy="150" r="15" fill="white" />
-          <circle cx="180" cy="150" r="15" fill="white" />
-          <path
-            d="M120,200 Q150,230 180,200"
-            stroke="white"
-            strokeWidth="5"
-            fill="none"
-          />
-          <path
-            d="M100,100 Q150,130 200,100"
-            stroke="white"
-            strokeWidth="5"
-            fill="none"
-          />
-        </svg>
+        <path
+          d="M150,30 C70,30 20,100 20,200 C20,290 80,280 150,280 C220,280 280,290 280,200 C280,100 230,30 150,30 Z"
+          fill="#222"
+        />
+        <circle cx="120" cy="150" r="15" fill="white" />
+        <circle cx="180" cy="150" r="15" fill="white" />
+        <path
+          d="M120,200 Q150,230 180,200"
+          stroke="white"
+          strokeWidth="5"
+          fill="none"
+        />
+        <path
+          d="M100,100 Q150,130 200,100"
+          stroke="white"
+          strokeWidth="5"
+          fill="none"
+        />
+        {/* </svg> */}
+        <img
+          className="w-64 h-64 md:w-80 md:h-80"
+          src={avatarImage}
+          alt="Avatar"
+        />
       </motion.div>
     </motion.div>
   );

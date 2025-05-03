@@ -17,7 +17,6 @@ import {
   SiGit,
 } from "react-icons/si";
 import jsImage from "../assets/java-script.svg";
-// import cImage from "../assets/c.svg";
 import cppImage from "../assets/c-.svg";
 import pythonImage from "../assets/python.svg";
 import gitImage from "../assets/git.svg";
@@ -37,7 +36,7 @@ function Skills() {
   // References and animations
   const controls = useAnimation();
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
 
   // Start animations when section comes into view
   useEffect(() => {
@@ -54,19 +53,19 @@ function Skills() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
+        staggerChildren: 0.1,
+        delayChildren: 0.05,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 40, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         ease: "easeOut",
       },
     },
@@ -103,52 +102,53 @@ function Skills() {
       key={index}
       variants={itemVariants}
       whileHover={{
-        scale: 1.15,
+        scale: 1.1,
         transition: { duration: 0.2 },
       }}
       whileTap={{ scale: 0.95 }}
-      className="flex flex-col items-center gap-2"
+      className="flex flex-col items-center gap-1 sm:gap-2"
     >
       <motion.div
-        className="flex items-center justify-center w-16 h-16"
+        className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16"
         whileHover={{
           filter: "drop-shadow(0 0 8px rgba(255,255,255,0.5))",
           transition: { duration: 0.2 },
         }}
       >
-        {
-          <img
-            src={item.image}
-            alt={item.name}
-            className="max-h-12 w-24 object-contain"
-          />
-        }
+        <img
+          src={item.image}
+          alt={item.name}
+          className="max-h-8 sm:max-h-12 w-16 sm:w-24 object-contain"
+        />
       </motion.div>
-      <span className="text-gray-600 text-lm font-bold mt-1">
+      <span className="text-gray-600 text-xs sm:text-sm font-bold mt-1">
         {item.name}
       </span>
     </motion.div>
   );
 
   return (
-    <div className="flex flex-col max-w-6xl mx-auto" ref={sectionRef}>
+    <div
+      className="flex flex-col max-w-6xl mx-auto px-4 sm:px-6"
+      ref={sectionRef}
+    >
       {/* Section: Languages I speak */}
       <motion.div
         initial="hidden"
         animate={controls}
         variants={containerVariants}
-        className="mb-12"
+        className="mb-8 sm:mb-12"
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl font-heading font-bold mb-8"
+          className="text-xl sm:text-3xl md:text-3xl font-heading font-bold mb-4 sm:mb-8 sm:text-left"
         >
           Languages I speak
         </motion.h2>
 
         <motion.div
           variants={containerVariants}
-          className="flex flex-wrap gap-6 sm:gap-16 pl-12"
+          className="flex flex-wrap  sm:justify-start gap-4 sm:gap-6 md:gap-16 pl-0 sm:pl-4 md:pl-12"
         >
           {languages.map((lang, index) => renderSkillItem(lang, index))}
         </motion.div>
@@ -159,18 +159,18 @@ function Skills() {
         initial="hidden"
         animate={controls}
         variants={containerVariants}
-        className="mb-12"
+        className="mb-8 sm:mb-12"
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl font-heading font-bold mb-8"
+          className="text-xl sm:text-3xl md:text-3xl font-heading font-bold mb-4 sm:mb-8  sm:text-left"
         >
           Frameworks & Databases I Love
         </motion.h2>
 
         <motion.div
           variants={containerVariants}
-          className="flex flex-wrap gap-6 sm:gap-16 pl-12"
+          className="flex flex-wrap  sm:justify-start gap-4 sm:gap-6 md:gap-16 pl-0 sm:pl-4 md:pl-12"
         >
           {frameworksDatabase.map((item, index) =>
             renderSkillItem(item, index)
@@ -183,18 +183,18 @@ function Skills() {
         initial="hidden"
         animate={controls}
         variants={containerVariants}
-        className="mb-12"
+        className="mb-8 sm:mb-12"
       >
         <motion.h2
           variants={itemVariants}
-          className="text-3xl font-heading font-bold mb-8"
+          className="text-xl sm:text-3xl md:text-3xl font-heading font-bold mb-4 sm:mb-8  sm:text-left"
         >
           Libraries & Services I Use
         </motion.h2>
 
         <motion.div
           variants={containerVariants}
-          className="flex flex-wrap gap-6 sm:gap-16 pl-12"
+          className="flex flex-wrap  sm:justify-start gap-4 sm:gap-6 md:gap-16 pl-0 sm:pl-4 md:pl-12"
         >
           {servicesLibraries.map((item, index) => renderSkillItem(item, index))}
         </motion.div>
