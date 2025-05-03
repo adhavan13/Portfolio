@@ -141,14 +141,14 @@ function Skills() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-xl sm:text-2xl md:text-3xl font-heading font-bold mb-4 sm:mb-8 text-center sm:text-left"
+          className="text-xl sm:text-3xl md:text-3xl font-heading font-bold mb-4 sm:mb-8 sm:text-left"
         >
           Languages I speak
         </motion.h2>
 
         <motion.div
           variants={containerVariants}
-          className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 md:gap-16 pl-0 sm:pl-4 md:pl-12"
+          className="flex flex-wrap  sm:justify-start gap-4 sm:gap-6 md:gap-16 pl-0 sm:pl-4 md:pl-12"
         >
           {languages.map((lang, index) => renderSkillItem(lang, index))}
         </motion.div>
@@ -163,14 +163,14 @@ function Skills() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-xl sm:text-2xl md:text-3xl font-heading font-bold mb-4 sm:mb-8 text-center sm:text-left"
+          className="text-xl sm:text-3xl md:text-3xl font-heading font-bold mb-4 sm:mb-8  sm:text-left"
         >
           Frameworks & Databases I Love
         </motion.h2>
 
         <motion.div
           variants={containerVariants}
-          className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 md:gap-16 pl-0 sm:pl-4 md:pl-12"
+          className="flex flex-wrap  sm:justify-start gap-4 sm:gap-6 md:gap-16 pl-0 sm:pl-4 md:pl-12"
         >
           {frameworksDatabase.map((item, index) =>
             renderSkillItem(item, index)
@@ -187,14 +187,14 @@ function Skills() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-xl sm:text-2xl md:text-3xl font-heading font-bold mb-4 sm:mb-8 text-center sm:text-left"
+          className="text-xl sm:text-3xl md:text-3xl font-heading font-bold mb-4 sm:mb-8  sm:text-left"
         >
           Libraries & Services I Use
         </motion.h2>
 
         <motion.div
           variants={containerVariants}
-          className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 md:gap-16 pl-0 sm:pl-4 md:pl-12"
+          className="flex flex-wrap  sm:justify-start gap-4 sm:gap-6 md:gap-16 pl-0 sm:pl-4 md:pl-12"
         >
           {servicesLibraries.map((item, index) => renderSkillItem(item, index))}
         </motion.div>
