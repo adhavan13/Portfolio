@@ -8,7 +8,7 @@ export default function WorkExperience() {
       department: "Sai Sakthi Enterprises",
       period: "January 2025 - April 2025",
       responsibilities: [
-        "Built and deployed a SaaS analytics platform for brands on Zepto, Blinkit, and Instamart, offering pincode-level insights into stock, visibility, and ranking across 1000+ stores in India; adopted by top D2C brands like Mokobara and Lifelong.",
+        "Built and deployed a SaaS analytics platform for brands on Zepto, Blinkit, and Instamart, offering pincode-level insights into stock, visibility, and ranking across 1000+ stores in India adopted by top D2C brands like Mokobara and Lifelong.",
         "Designed and implemented fully automated data pipelines using Selenium and GCP (Cloud Run, BigQuery, Scheduler), saving 100+ manual hours/month and ensuring sub-2-hour daily refreshes.",
         "Led the development of a Shopify Partner App (Remix + BigQuery) for advanced product sorting, increasing catalog engagement by ~30%; listed on the Shopify App Store.",
       ],
@@ -31,7 +31,7 @@ export default function WorkExperience() {
 
   return (
     <div className="max-w-6xl mx-auto pt-8">
-      <h1 className="text-4xl font-font-roboto font-bold mb-8">
+      <h1 className="text-3xl font-font-roboto font-bold mb-8">
         Where I've Worked
       </h1>
 
@@ -62,12 +62,14 @@ export default function WorkExperience() {
               <span className="font-heading font-bold text-gray-500">
                 {experiences[selectedExp].role}
               </span>{" "}
-              <span className="font-bold">at{" "}</span>
+              <span className="font-bold">at </span>
               <span className="underline decoration-2 decoration-gray-500 font-bold">
                 {experiences[selectedExp].department}
               </span>
             </h2>
-            <p className="text-xl mb-6 font-bold">{experiences[selectedExp].period}</p>
+            <p className="text-xl mb-6 font-bold">
+              {experiences[selectedExp].period}
+            </p>
           </div>
 
           <ul className="list-disc ml-5 space-y-3 font-heading">
