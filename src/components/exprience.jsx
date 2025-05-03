@@ -57,8 +57,8 @@ export default function WorkExperience() {
 
         {/* Right side with selected experience details */}
         <div className="font-roboto md:w-3/4 ">
-          <div className="mb-4 font-bolder">
-            <h2 className="text-4xl ">
+          <div className="mb-4 font-bolder flex flex-col gap-2">
+            <h2 className="text-xl md:text-4xl">
               <span className="font-heading font-bold text-gray-500">
                 {experiences[selectedExp].role}
               </span>{" "}
@@ -67,7 +67,7 @@ export default function WorkExperience() {
                 {experiences[selectedExp].department}
               </span>
             </h2>
-            <p className="text-xl mb-6 font-bold">
+            <p className="text-sm mb-6 font-bold md:text-xl mb-6 font-bold">
               {experiences[selectedExp].period}
             </p>
           </div>
