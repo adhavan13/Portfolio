@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 export default function OtherProjects() {
   const [showAll, setShowAll] = useState(false);
@@ -44,11 +44,11 @@ export default function OtherProjects() {
     },
 
     {
-      title: "Geek Coder",
+      title: "Here to Solve",
       subtitle: " ",
       description:
-        "Created an AI-powered Telegram bot to assist with coding doubts in real-time. Users can ask questions on programming concepts, syntax, or logic, and get clear, instant explanations. Designed to support learners and developers with 24/7 accessible, conversational coding help—like having a tutor in your pocket.",
-      technologies: ["Python", "Telegram", "gemini-1.5-pro", "Long polling"],
+        "ProblemSolver is a peer-to-peer tech help platform for college students, inspired by Fiverr and Instagram. Students post problems with rewards, and others solve them to earn. With over 1 lakh students seeking such solutions each semester, it fills a real and growing need in the student tech community",
+      technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
       githubLink: "https://github.com/adhavan13/telegramBotMessagePython",
       appLink: "https://t.me/my_code_learner_bot",
     },
@@ -146,13 +146,13 @@ export default function OtherProjects() {
             {visibleProjects.map((project, index) => (
               <motion.div
                 key={project.title}
-                className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200"
+                className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 flex flex-col"
                 variants={childVariants}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 exit={{ opacity: 0, y: -20, transition: { duration: 0.3 } }}
               >
-                <div className="p-4 sm:p-5 md:p-6">
-                  <div className="flex justify-between items-start mb-2">
+                <div className="p-4 sm:p-5 md:p-6 flex flex-col h-full">
+                  <div className="flex justify-between items-start mb-3">
                     <div>
                       <h3 className="text-lg sm:text-xl font-bold">
                         {project.title}
@@ -161,22 +161,33 @@ export default function OtherProjects() {
                         {project.subtitle || "Project subtitle"}
                       </p>
                     </div>
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 hover:bg-gray-100 transition-colors"
-                      aria-label="Visit GitHub repository"
-                    >
-                      <Github size={18} />
-                    </a>
+                    <div className="flex space-x-2">
+                      <a
+                        href={project.appLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 hover:bg-gray-100 transition-colors"
+                        aria-label="Visit project"
+                      >
+                        <ExternalLink size={18} />
+                      </a>
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 hover:bg-gray-100 transition-colors"
+                        aria-label="Visit GitHub repository"
+                      >
+                        <Github size={18} />
+                      </a>
+                    </div>
                   </div>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-3 sm:mb-4 h-32 sm:h-40 md:h-48 overflow-y-auto mt-2 pr-1">
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-3 sm:mb-4 overflow-y-auto mt-2 pr-1 flex-grow">
                     {project.description}
                   </p>
 
-                  <div className="mt-auto">
+                  <div className="mt-auto pt-2">
                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       {project.technologies.map((tech, i) => (
                         <motion.span
@@ -191,17 +202,6 @@ export default function OtherProjects() {
                       ))}
                     </div>
                   </div>
-                </div>
-
-                <div className="border-t border-gray-200 p-3 sm:p-4">
-                  <a
-                    href={project.appLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-center block text-gray-700 hover:text-black text-sm sm:text-base font-medium"
-                  >
-                    Visit
-                  </a>
                 </div>
               </motion.div>
             ))}
