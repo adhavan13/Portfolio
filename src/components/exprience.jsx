@@ -10,7 +10,7 @@ export default function WorkExperience() {
       responsibilities: [
         "Built and deployed a SaaS analytics platform for brands on Zepto, Blinkit, and Instamart, offering pincode-level insights into stock, visibility, and ranking across 1000+ stores in India adopted by top D2C brands like Mokobara and Lifelong.",
         "Designed and implemented fully automated data pipelines using Selenium and GCP (Cloud Run, BigQuery, Scheduler), saving 100+ manual hours/month and ensuring sub-2-hour daily refreshes.",
-        "Led the development of a Shopify Partner App (Remix + BigQuery) for advanced product sorting, increasing catalog engagement by ~30%; listed on the Shopify App Store.",
+        "Worked in the development of a Shopify Partner App (Remix + BigQuery) for advanced product sorting, increasing catalog engagement by 30%, listed on the Shopify App Store.",
       ],
     },
 

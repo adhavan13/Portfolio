@@ -5,7 +5,7 @@ import LinkedInIcon from "../assets/linkedin.svg";
 import GithubIcon from "../assets/github.svg";
 import { SiLeetcode } from "react-icons/si";
 import Resume from "/resume.pdf";
-import avatarImage from "../assets/avatar.svg";
+import avatarImage from "../assets/profile.svg";
 
 function NameSection() {
   const roles = ["developer", "creator", "strategist", "Analyst"];
