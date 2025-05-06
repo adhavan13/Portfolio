@@ -6,7 +6,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<CppCompilerLoading />} />
-      <Route path="/project" element={<ProjectDetailPage />} />
+      <Route path="/projectview" element={<ProjectDetailPage />} />
     </Routes>
   );
 }

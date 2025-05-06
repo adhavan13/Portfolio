@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { Github, ExternalLink, Lock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function OtherProjects() {
+  const Navigate = useNavigate();
   const [showAll, setShowAll] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const controls = useAnimation();
@@ -24,8 +26,9 @@ export default function OtherProjects() {
       githubLink: "https://github.com/adhavan13/hackItFinTech",
       appLink: "https://growth-guardian.vercel.app/",
       isPrivate: false,
+      hosted: true,
     },
-    { 
+    {
       title: "India Post AI Platform",
       subtitle: "Smart India Hackathon 2024 Finalist",
       description:
@@ -43,6 +46,7 @@ export default function OtherProjects() {
       githubLink: "https://github.com/girish-gaikwad/PostalService",
       appLink: "https://github.com/girish-gaikwad/PostalService",
       isPrivate: false,
+      hosted: false,
     },
 
     {
@@ -54,6 +58,7 @@ export default function OtherProjects() {
       githubLink: "https://github.com/adhavan13/telegramBotMessagePython",
       appLink: "https://t.me/my_code_learner_bot",
       isPrivate: true,
+      hosted: true,
     },
   ];
 
@@ -165,15 +170,27 @@ export default function OtherProjects() {
                       </p>
                     </div>
                     <div className="flex space-x-2">
-                      <a
-                        href={project.appLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 hover:bg-gray-100 transition-colors"
-                        aria-label="Visit project"
-                      >
-                        <ExternalLink size={18} />
-                      </a>
+                      {project.hosted ? (
+                        <a
+                          href={project.appLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 hover:bg-gray-100 transition-colors"
+                          aria-label="Visit project"
+                        >
+                          <ExternalLink size={18} />
+                        </a>
+                      ) : (
+                        <button
+                          className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 hover:bg-gray-100 transition-colors"
+                          aria-label="Visit project"
+                          onClick={() => {
+                            Navigate("/project");
+                          }}
+                        >
+                          <ExternalLink size={18} />
+                        </button>
+                      )}
                       {project.isPrivate ? (
                         <div
                           className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 bg-gray-50 text-gray-400 cursor-not-allowed"
