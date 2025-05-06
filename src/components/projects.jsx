@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, Lock } from "lucide-react";
 
 export default function OtherProjects() {
   const [showAll, setShowAll] = useState(false);
@@ -23,8 +23,9 @@ export default function OtherProjects() {
       ],
       githubLink: "https://github.com/adhavan13/hackItFinTech",
       appLink: "https://growth-guardian.vercel.app/",
+      isPrivate: false,
     },
-    {
+    { 
       title: "India Post AI Platform",
       subtitle: "Smart India Hackathon 2024 Finalist",
       description:
@@ -41,6 +42,7 @@ export default function OtherProjects() {
       ],
       githubLink: "https://github.com/girish-gaikwad/PostalService",
       appLink: "https://github.com/girish-gaikwad/PostalService",
+      isPrivate: false,
     },
 
     {
@@ -51,6 +53,7 @@ export default function OtherProjects() {
       technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
       githubLink: "https://github.com/adhavan13/telegramBotMessagePython",
       appLink: "https://t.me/my_code_learner_bot",
+      isPrivate: true,
     },
   ];
 
@@ -171,15 +174,24 @@ export default function OtherProjects() {
                       >
                         <ExternalLink size={18} />
                       </a>
-                      <a
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 hover:bg-gray-100 transition-colors"
-                        aria-label="Visit GitHub repository"
-                      >
-                        <Github size={18} />
-                      </a>
+                      {project.isPrivate ? (
+                        <div
+                          className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 bg-gray-50 text-gray-400 cursor-not-allowed"
+                          title="Private repository"
+                        >
+                          <Lock size={18} />
+                        </div>
+                      ) : (
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 hover:bg-gray-100 transition-colors"
+                          aria-label="Visit GitHub repository"
+                        >
+                          <Github size={18} />
+                        </a>
+                      )}
                     </div>
                   </div>
 

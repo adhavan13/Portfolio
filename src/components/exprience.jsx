@@ -3,10 +3,10 @@ import React, { useState } from "react";
 export default function WorkExperience() {
   const experiences = [
     {
-      company: "Sai Sakthi Enterprises",
+      company: "EQ_REV",
       role: "Software Engineer",
-      department: "Sai Sakthi Enterprises",
-      period: "January 2025 - April 2025",
+      department: "EQ_REV",
+      period: "January 2025 - Current",
       responsibilities: [
         "Built and deployed a SaaS analytics platform for brands on Zepto, Blinkit, and Instamart, offering pincode-level insights into stock, visibility, and ranking across 1000+ stores in India adopted by top D2C brands like Mokobara and Lifelong.",
         "Designed and implemented fully automated data pipelines using Selenium and GCP (Cloud Run, BigQuery, Scheduler), saving 100+ manual hours/month and ensuring sub-2-hour daily refreshes.",

@@ -1,10 +1,14 @@
-import { useState } from "react";
-import Home from "./pages/home";
-
 import CppCompilerLoading from "./components/loading";
+import { Routes, Route } from "react-router-dom";
+import ProjectDetailPage from "./pages/projectView";
 
 function App() {
-  return <CppCompilerLoading />;
+  return (
+    <Routes>
+      <Route path="/" element={<CppCompilerLoading />} />
+      <Route path="/project" element={<ProjectDetailPage />} />
+    </Routes>
+  );
 }
 
 export default App;
