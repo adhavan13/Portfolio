@@ -7,7 +7,7 @@ const ProjectsList = () => {
   const projects = [
     {
       id: 1,
-      title: "Eq_Rev - Sai Sakthi Enterprises",
+      title: "Eq_Rev",
       role: "Lead Developer",
       description:
         "A data-driven platform I built to help brands on Zepto, Blinkit, and Instamart gain deep visibility into their product performance. It offers store-level and pincode-level analytics on stock availability, listing health, and ad performance across 1000+ stores in India. I automated the entire data pipeline using Selenium and Google Cloud (Cloud Run, BigQuery, Scheduler), enabling daily insights with zero manual effort. Currently trusted by 5+ D2C brands, including Mokobara and Lifelong, to optimize revenue and campaign strategies.",

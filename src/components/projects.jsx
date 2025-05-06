@@ -25,7 +25,7 @@ export default function OtherProjects() {
       appLink: "https://growth-guardian.vercel.app/",
       isPrivate: false,
     },
-    {
+    { 
       title: "India Post AI Platform",
       subtitle: "Smart India Hackathon 2024 Finalist",
       description:

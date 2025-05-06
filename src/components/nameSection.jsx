@@ -145,6 +145,7 @@ function NameSection() {
         >
           <motion.a
             href="https://www.linkedin.com/in/adhavan10/"
+            target="_blank"
             className="text-white rounded-md hover:transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -153,6 +154,7 @@ function NameSection() {
           </motion.a>
           <motion.a
             href="https://github.com/adhavan13"
+            target="_blank"
             className="text-white rounded-md hover: transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -161,6 +163,7 @@ function NameSection() {
           </motion.a>
           <motion.a
             href="https://leetcode.com/u/adhavankannan10/"
+            target="_blank"
             className="text-black rounded-md hover:transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
