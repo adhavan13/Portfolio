@@ -56,7 +56,7 @@ export default function OtherProjects() {
         "ProblemSolver is a peer-to-peer tech help platform for college students, inspired by Fiverr and Instagram. Students post problems with rewards, and others solve them to earn. With over 1 lakh students seeking such solutions each semester, it fills a real and growing need in the student tech community",
       technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
       githubLink: "https://github.com/adhavan13/telegramBotMessagePython",
-      appLink: "https://t.me/my_code_learner_bot",
+      appLink: "https://here-to-solve.vercel.app/",
       isPrivate: true,
       hosted: true,
     },
@@ -181,15 +181,12 @@ export default function OtherProjects() {
                           <ExternalLink size={18} />
                         </a>
                       ) : (
-                        <button
-                          className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 hover:bg-gray-100 transition-colors"
-                          aria-label="Visit project"
-                          onClick={() => {
-                            Navigate("/project");
-                          }}
+                        <div
+                          className="inline-flex items-center justify-center border border-gray-300 rounded-md p-1.5 sm:p-2 bg-gray-50 text-gray-400 cursor-not-allowed"
+                          title="Not hosted because India post is using this solution"
                         >
-                          <ExternalLink size={18} />
-                        </button>
+                          <Lock size={18} />
+                        </div>
                       )}
                       {project.isPrivate ? (
                         <div
