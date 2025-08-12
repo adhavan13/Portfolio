@@ -211,7 +211,7 @@ function NameSection() {
           fill="none"
         />
         {/* </svg> */}
-        <div className="w-64 h-64 md:w-80 md:h-80">
+        <div className=" mb-16 w-64 h-64 md:w-80 md:h-80">
           <img
             src={avatarImage}
             alt="Avatar"
