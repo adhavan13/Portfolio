@@ -5,7 +5,7 @@ import LinkedInIcon from "../assets/linkedin.svg";
 import GithubIcon from "../assets/github.svg";
 import { SiLeetcode } from "react-icons/si";
 import Resume from "/resume.pdf";
-import avatarImage from "../assets/profile.svg";
+import avatarImage from "../assets/avatar.png";
 
 function NameSection() {
   const roles = ["developer", "creator", "strategist", "Analyst"];
@@ -211,11 +211,12 @@ function NameSection() {
           fill="none"
         />
         {/* </svg> */}
-        <img
-          className="w-64 h-64 md:w-80 md:h-80"
-          src={avatarImage}
-          alt="Avatar"
-        />
+        <div className="w-64 h-64 md:w-80 md:h-80">
+          <img
+            src={avatarImage}
+            alt="Avatar"
+          />
+        </div>
       </motion.div>
     </motion.div>
   );

@@ -1,4 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  --font-heading: Poppins, sans-serif;
+  --font-body: Roboto, sans-serif;
+  --font-open: "Open Sans", sans-serif;
+  --font-special: "Special Gothic Expanded One", sans-serif;
+  --font-roboto: Roboto, sans-serif;
+  --font-lato: Lato, sans-serif;
+  --font-spacegrotesk: "Space Grotesk", sans-serif;
+  --font-saira: "Saira Stencil One", cursive;
+
+  --color-primary: #1e3a8a;
+  --color-secondary: #f59e0b;
+  --color-accent: #10b981;
+
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3rem;
+}
