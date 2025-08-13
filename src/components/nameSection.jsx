@@ -72,7 +72,7 @@ function NameSection() {
 
   return (
     <motion.div
-      className="flex flex-col font-heading md:flex-row items-center justify-between w-full max-w-6xl  py-12"
+      className="flex flex-col font-heading md:flex-row items-center justify-between w-full max-w-6xl py-12 px-2  "
       initial="hidden"
       animate="visible"
       variants={containerVariants}
