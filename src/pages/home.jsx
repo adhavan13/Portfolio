@@ -7,6 +7,7 @@ import ProjectsList from "../components/products";
 import OtherProjects from "../components/projects";
 import Footer from "../components/footer";
 import NavBar from "../components/navBar";
+import SideElements from "../components/sideElements";
 
 function HomePage() {
   const [activeSection, setActiveSection] = useState("home");
@@ -60,7 +61,9 @@ function HomePage() {
 
       <div className="flex w-full">
         {/* Left spacer */}
-        <div style={sideSpacerStyle} className="flex"></div>
+        <div style={sideSpacerStyle} className="flex">
+           <SideElements />
+        </div>
 
         {/* Main content */}
         <div
