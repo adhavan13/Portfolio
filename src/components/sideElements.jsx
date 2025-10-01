@@ -95,7 +95,7 @@ const SideElements = () => {
                     letterSpacing: "2px",
                   }}
                 >
-                  adhavankannan@gmail.com
+                  adhavankannan10@gmail.com
                 </div>
 
                 {/* Vertical Line */}

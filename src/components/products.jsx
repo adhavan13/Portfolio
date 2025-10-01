@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import eqrevImage from "../assets/eqrev.jpg"; 
-import dcodeImage from "../assets/logo128.png"; 
+import eqrevImage from "../assets/eqrev.jpg";
+import dcodeImage from "../assets/logo128.png";
 
 const ProjectsList = () => {
   // Sample project data
@@ -26,10 +26,10 @@ const ProjectsList = () => {
     },
     {
       id: 2,
-      title: "DCode",
+      title: "DCode - Chrome Extension",
       role: "Lead Developer",
       description:
-        "DCode is an AI-powered platform that simulates real-world coding interviews and provides intelligent guidance for solving LeetCode-style problems. Trusted by 500+ students, it bridges the gap between practicing questions and facing an actual interview panel by offering instant feedback, hints, and performance insights.",
+        "DCode is an AI-powered Extension that simulates real-world coding interviews in Leetcode and provides intelligent guidance for solving problems. Trusted by 500+ students, it bridges the gap between practicing questions and facing an actual interview panel by offering instant feedback, hints, and performance insights.",
       image: dcodeImage, // Replace with your image path
       technologies: [
         "React",
