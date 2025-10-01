@@ -1,13 +1,14 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import eqrevImage from "../assets/eqrev.jpg"; // Import your image here
+import eqrevImage from "../assets/eqrev.jpg"; 
+import dcodeImage from "../assets/logo128.png"; 
 
 const ProjectsList = () => {
   // Sample project data
   const projects = [
     {
       id: 1,
-      title: "Eq_Rev",
+      title: "EQrev",
       role: "Lead Developer",
       description:
         "A data-driven platform I built to help brands on Zepto, Blinkit, and Instamart gain deep visibility into their product performance. It offers store-level and pincode-level analytics on stock availability, listing health, and ad performance across 1000+ stores in India. I automated the entire data pipeline using Selenium and Google Cloud (Cloud Run, BigQuery, Scheduler), enabling daily insights with zero manual effort. Currently trusted by 5+ D2C brands, including Pepe jeans,to optimize revenue and campaign strategies.",
@@ -23,28 +24,27 @@ const ProjectsList = () => {
       ],
       previewLink: "https://app.eqrev.com",
     },
-    // {
-    //   id: 1,
-    //   title: "Eq_Rev - Sai Sakthi Enterprises",
-    //   role: "Lead Developer",
-    //   description:
-    //     "A data-driven platform I built to help brands on Zepto, Blinkit, and Instamart gain deep visibility into their product performance. It offers store-level and pincode-level analytics on stock availability, listing health, and ad performance across 1000+ stores in India. I automated the entire data pipeline using Selenium and Google Cloud (Cloud Run, BigQuery, Scheduler), enabling daily insights with zero manual effort. Currently trusted by 5+ D2C brands, including Mokobara and Lifelong, to optimize revenue and campaign strategies.",
-    //   image: eqrevImage, // Replace with your image path
-    //   technologies: [
-    //     "React",
-    //     "Node.js",
-    //     "Selenium",
-    //     "BigQuery",
-    //     "Google Cloud Run",
-    //     "Cloud Scheduler",
-    //     "Cloud Storage",
-    //   ],
-    //   previewLink: "https://app.eqrev.com",
-    // },
+    {
+      id: 2,
+      title: "DCode",
+      role: "Lead Developer",
+      description:
+        "DCode is an AI-powered platform that simulates real-world coding interviews and provides intelligent guidance for solving LeetCode-style problems. Trusted by 500+ students, it bridges the gap between practicing questions and facing an actual interview panel by offering instant feedback, hints, and performance insights.",
+      image: dcodeImage, // Replace with your image path
+      technologies: [
+        "React",
+        "Node.js",
+        "Manifest",
+        "MongoDB",
+        "Express",
+        "Gemni API",
+      ],
+      previewLink: "https://app.eqrev.com",
+    },
   ];
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-full max-w-6xl mx-auto">
       <motion.h1
         className="text-2xl sm:text-3xl font-heading font-bold mb-8 sm:mb-12 sm:text-left"
         initial={{ opacity: 0, y: -20 }}
@@ -94,7 +94,7 @@ const ProjectCard = ({ project, index }) => {
     >
       {/* Project image */}
       <motion.div
-        className="w-full lg:w-1/2 flex items-center justify-center"
+        className="w-full lg:w-[60%] flex items-center justify-center"
         variants={imageVariants}
       >
         <img

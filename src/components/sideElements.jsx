@@ -1,75 +1,110 @@
-// Component for side social links and email
-// Add this as a new component file or integrate directly into your HomePage
-
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import LinkedInIcon from "../assets/linkedin.svg";
+import GithubIcon from "../assets/github.svg";
+import { SiLeetcode } from "react-icons/si";
 
 const SideElements = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
-      // Check if user has scrolled beyond the initial viewport height
       const scrolled = window.scrollY > window.innerHeight * 0.7;
       setIsScrolled(scrolled);
     };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
+  // Variants for animation
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+    exit: { opacity: 0, y: 20, transition: { duration: 0.4, ease: "easeIn" } },
+  };
+
   return (
     <>
       {/* Left side - Social Icons */}
-      <div className="hidden md:flex fixed left-0 bottom-0 z-10 flex-col items-center">
-        <div className="flex flex-col gap-6 mb-6">
-          <a 
-            href="#" 
-            className={`w-6 h-6 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
+      <AnimatePresence>
+        {isScrolled && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={fadeIn}
+            className="hidden md:flex fixed left-6 bottom-0 z-10 flex-col items-center"
           >
-            {/* GitHub placeholder - replace with your actual SVG */}
-            <div className="w-6 h-6 bg-black rounded-full"></div>
-          </a>
-          <a 
-            href="#" 
-            className={`w-6 h-6 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
-          >
-            {/* LeetCode placeholder - replace with your actual SVG */}
-            <div className="w-6 h-6 bg-black rounded-full"></div>
-          </a>
-          <a 
-            href="#" 
-            className={`w-6 h-6 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
-          >
-            {/* Third icon placeholder - replace with your actual SVG */}
-            <div className="w-6 h-6 bg-black rounded-full"></div>
-          </a>
-        </div>
-        <div 
-          className={`w-px h-24 bg-black transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
-        ></div>
-      </div>
-      
-      {/* Right side - Email */}
-      <div className="hidden md:block fixed right-8 bottom-0 z-10">
-        <a
-          href="#"
-          className={`transition-opacity duration-300 block ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
-        >
-          <div className="flex flex-col items-center">
-            <div 
-              className="text-black text-sm transform rotate-90 origin-bottom-right"
-              style={{
-                writingMode: "vertical-rl",
-                letterSpacing: "2px",
-              }}
-            >
-              adhavankannan@gmail.com
+            <div className="flex flex-col gap-5 mb-2 ">
+              <motion.a
+                href="https://github.com/adhavan13"
+                target="_blank"
+                className="text-white rounded-md hover:transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <img src={GithubIcon} alt="LinkedIn" className="w-7 h-7" />
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/adhavan10/"
+                target="_blank"
+                className="text-white rounded-md hover:transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <img src={LinkedInIcon} alt="LinkedIn" className="w-7 h-7" />
+              </motion.a>
+              <motion.a
+                href="https://leetcode.com/u/adhavankannan10/"
+                target="_blank"
+                className="text-black rounded-md hover:transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <SiLeetcode className="w-7 h-7" />
+              </motion.a>
             </div>
-            <div className="w-px h-24 bg-black mt-4"></div>
-          </div>
-        </a>
-      </div>
+            <motion.div className="w-0.5 h-24 bg-black opacity-70" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Right side - Email */}
+      <AnimatePresence>
+        {isScrolled && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={fadeIn}
+            className="hidden md:block fixed right-8 bottom-0"
+          >
+            <a href="mailto:adhavankannan@gmail.com">
+              <div className="flex flex-col items-center gap-4">
+                {/* Rotated Email */}
+                <div
+                  className="text-black text-lg Space Grotesk"
+                  style={{
+                    writingMode: "vertical-rl",
+                    textOrientation: "mixed",
+                    letterSpacing: "2px",
+                  }}
+                >
+                  adhavankannan@gmail.com
+                </div>
+
+                {/* Vertical Line */}
+                <motion.div className="w-0.5 h-17 bg-black opacity-70" />
+              </div>
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

@@ -129,7 +129,7 @@ function Skills() {
 
   return (
     <div
-      className="flex flex-col max-w-6xl mx-auto px-4 sm:px-6"
+      className="flex flex-col max-w-6xl mx-auto"
       ref={sectionRef}
     >
       {/* Section: Languages I speak */}

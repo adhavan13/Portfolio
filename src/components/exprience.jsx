@@ -30,7 +30,7 @@ export default function WorkExperience() {
   const [selectedExp, setSelectedExp] = useState(0);
 
   return (
-    <div className="max-w-6xl mx-auto pt-8">
+    <div id="experience" className="max-w-6xl mx-auto pt-8">
       <h1 className="text-3xl font-font-roboto font-bold mb-8">
         Where I've Worked
       </h1>
