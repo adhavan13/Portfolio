@@ -50,14 +50,20 @@ export default function OtherProjects() {
     },
 
     {
-      title: "Here to Solve",
-      subtitle: " ",
+      title: "Civic-Lens",
+      subtitle: "Hack'25 - Hackathon",
       description:
-        "ProblemSolver is a peer-to-peer tech help platform for college students, inspired by Fiverr and Instagram. Students post problems with rewards, and others solve them to earn. With over 1 lakh students seeking such solutions each semester, it fills a real and growing need in the student tech community",
-      technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
-      githubLink: "https://github.com/adhavan13/telegramBotMessagePython",
-      appLink: "https://here-to-solve.vercel.app/",
-      isPrivate: true,
+        "A hackathon project I led as a developer, built to make governance transparent by tracking public projects, funds, and grievances. I also created the RTI Acceleration Bot, which uses LLMs with RAG to generate instant, detailed RTI reports.",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        "Gemni API",
+      ],
+      githubLink: "https://github.com/adhavan13/Hack25-Frontend.git",
+      appLink: "https://civic-lens-app.vercel.app/",
+      isPrivate: false,
       hosted: true,
     },
   ];
